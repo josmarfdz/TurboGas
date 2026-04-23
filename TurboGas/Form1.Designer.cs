@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.login1 = new TurboGas.Login();
-            this.islas1 = new TurboGas.Islas();
             this.SuspendLayout();
             // 
             // login1
@@ -40,20 +39,12 @@
             this.login1.Size = new System.Drawing.Size(800, 500);
             this.login1.TabIndex = 0;
             // 
-            // islas1
-            // 
-            this.islas1.Location = new System.Drawing.Point(96, 12);
-            this.islas1.Name = "islas1";
-            this.islas1.Size = new System.Drawing.Size(800, 500);
-            this.islas1.TabIndex = 1;
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(982, 553);
-            this.Controls.Add(this.islas1);
             this.Controls.Add(this.login1);
             this.Name = "Form1";
             this.Text = "TurboGas";
@@ -64,7 +55,6 @@
         #endregion
 
         private Login login1;
-        private Islas islas1;
     }
 }
 

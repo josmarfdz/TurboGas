@@ -39,6 +39,7 @@
             this.tbContraseña = new TurboGas.Elementos.Contraseñas();
             this.lblTitle = new System.Windows.Forms.Label();
             this.ucRegistro = new TurboGas.SignIn();
+            this.ucSucursales = new TurboGas.Sucursales();
             this.roundPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -168,11 +169,20 @@
             this.ucRegistro.Size = new System.Drawing.Size(800, 500);
             this.ucRegistro.TabIndex = 9;
             // 
+            // ucSucursales
+            // 
+            this.ucSucursales.BackColor = System.Drawing.Color.White;
+            this.ucSucursales.Location = new System.Drawing.Point(0, 0);
+            this.ucSucursales.Name = "ucSucursales";
+            this.ucSucursales.Size = new System.Drawing.Size(800, 500);
+            this.ucSucursales.TabIndex = 10;
+            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
+            this.Controls.Add(this.ucSucursales);
             this.Controls.Add(this.ucRegistro);
             this.Controls.Add(this.roundPanel1);
             this.Name = "Login";
@@ -196,5 +206,6 @@
         private System.Windows.Forms.LinkLabel linkRegistro;
         private OTPCorreo ucOTP;
         private SignIn ucRegistro;
+        private Sucursales ucSucursales;
     }
 }

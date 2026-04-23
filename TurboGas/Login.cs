@@ -17,6 +17,7 @@ namespace TurboGas
             InitializeComponent();
             ucOTP.Hide();
             ucRegistro.Hide();
+            ucSucursales.Hide();
         }
 
         private void linkRegistro_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -31,6 +32,7 @@ namespace TurboGas
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
+            ucSucursales.Show();
             tbCorreo.Text="";
             tbContraseña.Text="";
         }

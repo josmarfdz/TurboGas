@@ -12,7 +12,6 @@ namespace TurboGas
 {
     public partial class Islas : UserControl
     {
-        FormPerfil fPerfil = new FormPerfil();
         public Islas()
         {
             InitializeComponent();
@@ -25,7 +24,7 @@ namespace TurboGas
 
         private void btPerfil_Click(object sender, EventArgs e)
         {
-            fPerfil.Show();
+
         }
     }
 }
