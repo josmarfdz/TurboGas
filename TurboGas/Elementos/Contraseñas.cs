@@ -38,7 +38,7 @@ namespace TurboGas.Elementos
             eyeIcon.SizeMode = PictureBoxSizeMode.Zoom;
             eyeIcon.Cursor = Cursors.Hand;
 
-            eyeIcon.Image = Image.FromFile("C:/Users/craft/Downloads/Recursos-UI/EO.png");
+            eyeIcon.Image = Image.FromFile(@"C:\Users\Lesci\Downloads\hidden.png");
 
             eyeIcon.Click += TogglePassword;
 
@@ -53,9 +53,9 @@ namespace TurboGas.Elementos
             textBox.UseSystemPasswordChar = !mostrarPassword;
 
             if (mostrarPassword)
-                eyeIcon.Image = Image.FromFile("C:/Users/craft/Downloads/Recursos-UI/EC.png");
+                eyeIcon.Image = Image.FromFile(@"C:\Users\Lesci\Downloads\eye.png");
             else
-                eyeIcon.Image = Image.FromFile("C:/Users/craft/Downloads/Recursos-UI/EO.png");
+                eyeIcon.Image = Image.FromFile(@"C:\Users\Lesci\Downloads\hidden.png");
         }
 
         public override string Text
