@@ -26,5 +26,10 @@ namespace TurboGas
         {
 
         }
+
+        private void Islas_Load(object sender, EventArgs e)
+        {
+            lblNombre.Text = Sesion.UserNombre;
+        }
     }
 }

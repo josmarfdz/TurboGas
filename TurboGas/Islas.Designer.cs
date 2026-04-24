@@ -31,11 +31,11 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Islas));
             this.roundPanel1 = new TurboGas.Elementos.RoundPanel();
             this.Header = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btPerfil = new TurboGas.Elementos.Botón();
             this.lblNombre = new System.Windows.Forms.Label();
             this.roundPanel2 = new TurboGas.Elementos.RoundPanel();
             this.btConfiguración = new TurboGas.Elementos.Botón();
-            this.btPerfil = new TurboGas.Elementos.Botón();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.Header.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -43,9 +43,10 @@
             // roundPanel1
             // 
             this.roundPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.roundPanel1.Location = new System.Drawing.Point(157, 111);
+            this.roundPanel1.Location = new System.Drawing.Point(177, 139);
+            this.roundPanel1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.roundPanel1.Name = "roundPanel1";
-            this.roundPanel1.Size = new System.Drawing.Size(456, 124);
+            this.roundPanel1.Size = new System.Drawing.Size(513, 155);
             this.roundPanel1.TabIndex = 0;
             // 
             // Header
@@ -55,27 +56,57 @@
             this.Header.Controls.Add(this.btPerfil);
             this.Header.Controls.Add(this.lblNombre);
             this.Header.Location = new System.Drawing.Point(0, 0);
+            this.Header.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Header.Name = "Header";
-            this.Header.Size = new System.Drawing.Size(800, 67);
+            this.Header.Size = new System.Drawing.Size(900, 84);
             this.Header.TabIndex = 1;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(20, 0);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(126, 80);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 2;
+            this.pictureBox1.TabStop = false;
+            // 
+            // btPerfil
+            // 
+            this.btPerfil.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(120)))), ((int)(((byte)(59)))));
+            this.btPerfil.FlatAppearance.BorderSize = 0;
+            this.btPerfil.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(77)))), ((int)(((byte)(0)))));
+            this.btPerfil.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(165)))), ((int)(((byte)(125)))));
+            this.btPerfil.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btPerfil.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.btPerfil.Image = ((System.Drawing.Image)(resources.GetObject("btPerfil.Image")));
+            this.btPerfil.Location = new System.Drawing.Point(624, 15);
+            this.btPerfil.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btPerfil.Name = "btPerfil";
+            this.btPerfil.Size = new System.Drawing.Size(48, 50);
+            this.btPerfil.TabIndex = 1;
+            this.btPerfil.UseVisualStyleBackColor = false;
+            this.btPerfil.Click += new System.EventHandler(this.btPerfil_Click);
             // 
             // lblNombre
             // 
             this.lblNombre.AutoSize = true;
             this.lblNombre.Font = new System.Drawing.Font("Poppins SemiBold", 10F);
             this.lblNombre.ForeColor = System.Drawing.Color.White;
-            this.lblNombre.Location = new System.Drawing.Point(604, 22);
+            this.lblNombre.Location = new System.Drawing.Point(680, 28);
             this.lblNombre.Name = "lblNombre";
-            this.lblNombre.Size = new System.Drawing.Size(179, 30);
+            this.lblNombre.Size = new System.Drawing.Size(212, 36);
             this.lblNombre.TabIndex = 0;
             this.lblNombre.Text = "Nombre de usuario";
             // 
             // roundPanel2
             // 
             this.roundPanel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.roundPanel2.Location = new System.Drawing.Point(157, 302);
+            this.roundPanel2.Location = new System.Drawing.Point(177, 378);
+            this.roundPanel2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.roundPanel2.Name = "roundPanel2";
-            this.roundPanel2.Size = new System.Drawing.Size(456, 124);
+            this.roundPanel2.Size = new System.Drawing.Size(513, 155);
             this.roundPanel2.TabIndex = 1;
             // 
             // btConfiguración
@@ -87,49 +118,26 @@
             this.btConfiguración.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btConfiguración.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.btConfiguración.Image = ((System.Drawing.Image)(resources.GetObject("btConfiguración.Image")));
-            this.btConfiguración.Location = new System.Drawing.Point(732, 83);
+            this.btConfiguración.Location = new System.Drawing.Point(824, 104);
+            this.btConfiguración.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btConfiguración.Name = "btConfiguración";
-            this.btConfiguración.Size = new System.Drawing.Size(40, 40);
+            this.btConfiguración.Size = new System.Drawing.Size(45, 50);
             this.btConfiguración.TabIndex = 2;
             this.btConfiguración.UseVisualStyleBackColor = false;
             this.btConfiguración.Click += new System.EventHandler(this.btConfiguración_Click);
             // 
-            // btPerfil
-            // 
-            this.btPerfil.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(120)))), ((int)(((byte)(59)))));
-            this.btPerfil.FlatAppearance.BorderSize = 0;
-            this.btPerfil.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(77)))), ((int)(((byte)(0)))));
-            this.btPerfil.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(165)))), ((int)(((byte)(125)))));
-            this.btPerfil.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btPerfil.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.btPerfil.Image = ((System.Drawing.Image)(resources.GetObject("btPerfil.Image")));
-            this.btPerfil.Location = new System.Drawing.Point(555, 12);
-            this.btPerfil.Name = "btPerfil";
-            this.btPerfil.Size = new System.Drawing.Size(43, 40);
-            this.btPerfil.TabIndex = 1;
-            this.btPerfil.UseVisualStyleBackColor = false;
-            this.btPerfil.Click += new System.EventHandler(this.btPerfil_Click);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(18, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(112, 64);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 2;
-            this.pictureBox1.TabStop = false;
-            // 
             // Islas
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.btConfiguración);
             this.Controls.Add(this.roundPanel2);
             this.Controls.Add(this.Header);
             this.Controls.Add(this.roundPanel1);
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "Islas";
-            this.Size = new System.Drawing.Size(800, 500);
+            this.Size = new System.Drawing.Size(900, 625);
+            this.Load += new System.EventHandler(this.Islas_Load);
             this.Header.ResumeLayout(false);
             this.Header.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
