@@ -62,6 +62,30 @@
     <Compile Include="CambioContraseña.Designer.cs">
       <DependentUpon>CambioContraseña.cs</DependentUpon>
     </Compile>
+    <Compile Include="CRUD_Bombas.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CRUD_Bombas.Designer.cs">
+      <DependentUpon>CRUD_Bombas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CRUD_Islas.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CRUD_Islas.Designer.cs">
+      <DependentUpon>CRUD_Islas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CRUD_Sucursales.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CRUD_Sucursales.Designer.cs">
+      <DependentUpon>CRUD_Sucursales.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CRUD_Usuarios.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CRUD_Usuarios.Designer.cs">
+      <DependentUpon>CRUD_Usuarios.cs</DependentUpon>
+    </Compile>
     <Compile Include="Elementos\Botón.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -134,6 +158,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="CambioContraseña.resx">
       <DependentUpon>CambioContraseña.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CRUD_Bombas.resx">
+      <DependentUpon>CRUD_Bombas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CRUD_Islas.resx">
+      <DependentUpon>CRUD_Islas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CRUD_Sucursales.resx">
+      <DependentUpon>CRUD_Sucursales.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CRUD_Usuarios.resx">
+      <DependentUpon>CRUD_Usuarios.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
