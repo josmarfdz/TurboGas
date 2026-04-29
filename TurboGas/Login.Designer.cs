@@ -55,26 +55,28 @@
             this.roundPanel1.Controls.Add(this.lblUsuario);
             this.roundPanel1.Controls.Add(this.tbContraseña);
             this.roundPanel1.Controls.Add(this.lblTitle);
-            this.roundPanel1.Location = new System.Drawing.Point(128, 62);
+            this.roundPanel1.Location = new System.Drawing.Point(144, 78);
+            this.roundPanel1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.roundPanel1.Name = "roundPanel1";
-            this.roundPanel1.Size = new System.Drawing.Size(544, 351);
+            this.roundPanel1.Size = new System.Drawing.Size(612, 439);
             this.roundPanel1.TabIndex = 1;
             // 
             // ucOTP
             // 
             this.ucOTP.BackColor = System.Drawing.Color.White;
-            this.ucOTP.Location = new System.Drawing.Point(-128, -62);
+            this.ucOTP.Location = new System.Drawing.Point(-144, -78);
+            this.ucOTP.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.ucOTP.Name = "ucOTP";
-            this.ucOTP.Size = new System.Drawing.Size(800, 500);
+            this.ucOTP.Size = new System.Drawing.Size(900, 625);
             this.ucOTP.TabIndex = 8;
             // 
             // linkFMP
             // 
             this.linkFMP.Font = new System.Drawing.Font("Poppins", 8.25F);
             this.linkFMP.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(120)))), ((int)(((byte)(59)))));
-            this.linkFMP.Location = new System.Drawing.Point(3, 301);
+            this.linkFMP.Location = new System.Drawing.Point(3, 376);
             this.linkFMP.Name = "linkFMP";
-            this.linkFMP.Size = new System.Drawing.Size(538, 23);
+            this.linkFMP.Size = new System.Drawing.Size(605, 29);
             this.linkFMP.TabIndex = 7;
             this.linkFMP.TabStop = true;
             this.linkFMP.Text = "Olvidé mi contraseña";
@@ -86,9 +88,9 @@
             // 
             this.linkRegistro.Font = new System.Drawing.Font("Poppins", 8.25F);
             this.linkRegistro.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(59)))), ((int)(((byte)(59)))));
-            this.linkRegistro.Location = new System.Drawing.Point(3, 275);
+            this.linkRegistro.Location = new System.Drawing.Point(3, 344);
             this.linkRegistro.Name = "linkRegistro";
-            this.linkRegistro.Size = new System.Drawing.Size(538, 23);
+            this.linkRegistro.Size = new System.Drawing.Size(605, 29);
             this.linkRegistro.TabIndex = 6;
             this.linkRegistro.TabStop = true;
             this.linkRegistro.Text = "¿Aún no te registras?";
@@ -105,9 +107,10 @@
             this.btnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLogin.Font = new System.Drawing.Font("Poppins SemiBold", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLogin.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.btnLogin.Location = new System.Drawing.Point(198, 219);
+            this.btnLogin.Location = new System.Drawing.Point(223, 274);
+            this.btnLogin.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnLogin.Name = "btnLogin";
-            this.btnLogin.Size = new System.Drawing.Size(150, 40);
+            this.btnLogin.Size = new System.Drawing.Size(169, 50);
             this.btnLogin.TabIndex = 5;
             this.btnLogin.Text = "Iniciar sesión";
             this.btnLogin.UseVisualStyleBackColor = false;
@@ -116,19 +119,20 @@
             // tbCorreo
             // 
             this.tbCorreo.BackColor = System.Drawing.Color.White;
-            this.tbCorreo.Location = new System.Drawing.Point(189, 98);
+            this.tbCorreo.Location = new System.Drawing.Point(213, 122);
+            this.tbCorreo.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tbCorreo.Name = "tbCorreo";
-            this.tbCorreo.Padding = new System.Windows.Forms.Padding(10);
-            this.tbCorreo.Size = new System.Drawing.Size(276, 40);
+            this.tbCorreo.Padding = new System.Windows.Forms.Padding(11, 12, 11, 12);
+            this.tbCorreo.Size = new System.Drawing.Size(310, 50);
             this.tbCorreo.TabIndex = 4;
             // 
             // lblContraseña
             // 
             this.lblContraseña.AutoSize = true;
             this.lblContraseña.Font = new System.Drawing.Font("Poppins", 9F);
-            this.lblContraseña.Location = new System.Drawing.Point(62, 161);
+            this.lblContraseña.Location = new System.Drawing.Point(70, 201);
             this.lblContraseña.Name = "lblContraseña";
-            this.lblContraseña.Size = new System.Drawing.Size(105, 26);
+            this.lblContraseña.Size = new System.Drawing.Size(126, 31);
             this.lblContraseña.TabIndex = 3;
             this.lblContraseña.Text = "Contraseña:";
             // 
@@ -136,27 +140,28 @@
             // 
             this.lblUsuario.AutoSize = true;
             this.lblUsuario.Font = new System.Drawing.Font("Poppins", 9F);
-            this.lblUsuario.Location = new System.Drawing.Point(99, 105);
+            this.lblUsuario.Location = new System.Drawing.Point(111, 131);
             this.lblUsuario.Name = "lblUsuario";
-            this.lblUsuario.Size = new System.Drawing.Size(68, 26);
+            this.lblUsuario.Size = new System.Drawing.Size(81, 31);
             this.lblUsuario.TabIndex = 2;
             this.lblUsuario.Text = "Correo:";
             // 
             // tbContraseña
             // 
             this.tbContraseña.BackColor = System.Drawing.Color.White;
-            this.tbContraseña.Location = new System.Drawing.Point(189, 152);
+            this.tbContraseña.Location = new System.Drawing.Point(213, 190);
+            this.tbContraseña.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tbContraseña.Name = "tbContraseña";
-            this.tbContraseña.Padding = new System.Windows.Forms.Padding(10);
-            this.tbContraseña.Size = new System.Drawing.Size(276, 40);
+            this.tbContraseña.Padding = new System.Windows.Forms.Padding(11, 12, 11, 12);
+            this.tbContraseña.Size = new System.Drawing.Size(310, 50);
             this.tbContraseña.TabIndex = 1;
             // 
             // lblTitle
             // 
             this.lblTitle.Font = new System.Drawing.Font("Poppins Medium", 12F);
-            this.lblTitle.Location = new System.Drawing.Point(3, 26);
+            this.lblTitle.Location = new System.Drawing.Point(3, 32);
             this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(538, 23);
+            this.lblTitle.Size = new System.Drawing.Size(605, 29);
             this.lblTitle.TabIndex = 0;
             this.lblTitle.Text = "Inicio de sesión";
             this.lblTitle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -165,28 +170,31 @@
             // 
             this.ucRegistro.BackColor = System.Drawing.Color.White;
             this.ucRegistro.Location = new System.Drawing.Point(0, 0);
+            this.ucRegistro.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.ucRegistro.Name = "ucRegistro";
-            this.ucRegistro.Size = new System.Drawing.Size(800, 500);
+            this.ucRegistro.Size = new System.Drawing.Size(900, 625);
             this.ucRegistro.TabIndex = 9;
             // 
             // ucSucursales
             // 
             this.ucSucursales.BackColor = System.Drawing.Color.White;
             this.ucSucursales.Location = new System.Drawing.Point(0, 0);
+            this.ucSucursales.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.ucSucursales.Name = "ucSucursales";
-            this.ucSucursales.Size = new System.Drawing.Size(800, 500);
+            this.ucSucursales.Size = new System.Drawing.Size(900, 625);
             this.ucSucursales.TabIndex = 10;
             // 
             // Login
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.Controls.Add(this.ucSucursales);
             this.Controls.Add(this.ucRegistro);
             this.Controls.Add(this.roundPanel1);
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "Login";
-            this.Size = new System.Drawing.Size(800, 500);
+            this.Size = new System.Drawing.Size(900, 625);
             this.roundPanel1.ResumeLayout(false);
             this.roundPanel1.PerformLayout();
             this.ResumeLayout(false);

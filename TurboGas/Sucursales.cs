@@ -41,5 +41,22 @@ namespace TurboGas
         {
 
         }
+
+        private void btnSettings_Click(object sender, EventArgs e)
+        {
+            Control contenedor = this.Parent; // Funciona con cualquier tipo
+
+            if (contenedor != null)
+            {
+                contenedor.Controls.Clear();
+                CRUD_Sucursales CRUDSuc = new CRUD_Sucursales();
+                CRUDSuc.Dock = DockStyle.Fill;
+                contenedor.Controls.Add(CRUDSuc);
+            }
+            else
+            {
+                MessageBox.Show("No se encontró contenedor padre.");
+            }
+        }
     }
 }

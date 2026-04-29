@@ -63,19 +63,7 @@ namespace TurboGas
                             Sesion.UserNombre = lectura["nombre"].ToString();
                             MessageBox.Show($"Bienvenido/a {Sesion.UserNombre}");
 
-                            Control contenedor = this.Parent; // Funciona con cualquier tipo
-
-                            if (contenedor != null)
-                            {
-                                contenedor.Controls.Clear();
-                                Sucursales sucur = new Sucursales();
-                                sucur.Dock = DockStyle.Fill;
-                                contenedor.Controls.Add(sucur);
-                            }
-                            else
-                            {
-                                MessageBox.Show("No se encontró contenedor padre.");
-                            }
+                            ucSucursales.Show();
                         }
 
                         else
