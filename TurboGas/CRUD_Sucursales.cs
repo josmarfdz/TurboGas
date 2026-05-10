@@ -274,7 +274,7 @@ namespace TurboGas
 
         private void CRUD_Sucursales_Load(object sender, EventArgs e)
         {
-
+            lblNombre.Text = Sesion.UserNombre;
         }
 
         private void btnBorrarSucursales_Click(object sender, EventArgs e)

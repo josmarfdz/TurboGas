@@ -41,12 +41,21 @@
             this.btnDel = new TurboGas.Elementos.Botón();
             this.roundPanel1 = new TurboGas.Elementos.RoundPanel();
             this.roundPanel2 = new TurboGas.Elementos.RoundPanel();
-            this.roundPanel3 = new TurboGas.Elementos.RoundPanel();
             this.label5 = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.roundPanel3 = new TurboGas.Elementos.RoundPanel();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.lblNombreUser = new System.Windows.Forms.Label();
+            this.btnVendedores = new System.Windows.Forms.Button();
+            this.btnUsers = new System.Windows.Forms.Button();
+            this.btnTipos = new System.Windows.Forms.Button();
+            this.btnTanques = new System.Windows.Forms.Button();
+            this.btnIslas = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.roundPanel1.SuspendLayout();
             this.roundPanel2.SuspendLayout();
             this.roundPanel3.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnCreate
@@ -63,6 +72,7 @@
             this.btnCreate.TabIndex = 0;
             this.btnCreate.Text = "Crear";
             this.btnCreate.UseVisualStyleBackColor = false;
+            this.btnCreate.Click += new System.EventHandler(this.btnCreate_Click);
             // 
             // label1
             // 
@@ -114,6 +124,7 @@
             this.btnUpd.TabIndex = 4;
             this.btnUpd.Text = "Actualizar";
             this.btnUpd.UseVisualStyleBackColor = false;
+            this.btnUpd.Click += new System.EventHandler(this.btnUpd_Click);
             // 
             // cmbUpdBomba
             // 
@@ -172,7 +183,7 @@
             this.roundPanel1.Controls.Add(this.btnCreate);
             this.roundPanel1.Controls.Add(this.label1);
             this.roundPanel1.Controls.Add(this.cmbCreSucursal);
-            this.roundPanel1.Location = new System.Drawing.Point(229, 33);
+            this.roundPanel1.Location = new System.Drawing.Point(42, 107);
             this.roundPanel1.Name = "roundPanel1";
             this.roundPanel1.Size = new System.Drawing.Size(415, 175);
             this.roundPanel1.TabIndex = 12;
@@ -187,21 +198,10 @@
             this.roundPanel2.Controls.Add(this.cmbUpdSuc);
             this.roundPanel2.Controls.Add(this.label3);
             this.roundPanel2.Controls.Add(this.cmbUpdBomba);
-            this.roundPanel2.Location = new System.Drawing.Point(229, 230);
+            this.roundPanel2.Location = new System.Drawing.Point(487, 107);
             this.roundPanel2.Name = "roundPanel2";
             this.roundPanel2.Size = new System.Drawing.Size(410, 215);
             this.roundPanel2.TabIndex = 13;
-            // 
-            // roundPanel3
-            // 
-            this.roundPanel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.roundPanel3.Controls.Add(this.btnDel);
-            this.roundPanel3.Controls.Add(this.label4);
-            this.roundPanel3.Controls.Add(this.cmbDelBomb);
-            this.roundPanel3.Location = new System.Drawing.Point(229, 462);
-            this.roundPanel3.Name = "roundPanel3";
-            this.roundPanel3.Size = new System.Drawing.Size(410, 151);
-            this.roundPanel3.TabIndex = 14;
             // 
             // label5
             // 
@@ -221,22 +221,140 @@
             this.comboBox1.Size = new System.Drawing.Size(121, 28);
             this.comboBox1.TabIndex = 10;
             // 
+            // roundPanel3
+            // 
+            this.roundPanel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.roundPanel3.Controls.Add(this.btnDel);
+            this.roundPanel3.Controls.Add(this.label4);
+            this.roundPanel3.Controls.Add(this.cmbDelBomb);
+            this.roundPanel3.Location = new System.Drawing.Point(487, 345);
+            this.roundPanel3.Name = "roundPanel3";
+            this.roundPanel3.Size = new System.Drawing.Size(410, 151);
+            this.roundPanel3.TabIndex = 14;
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(120)))), ((int)(((byte)(59)))));
+            this.panel1.Controls.Add(this.lblNombreUser);
+            this.panel1.Controls.Add(this.btnVendedores);
+            this.panel1.Controls.Add(this.btnUsers);
+            this.panel1.Controls.Add(this.btnTipos);
+            this.panel1.Controls.Add(this.btnTanques);
+            this.panel1.Controls.Add(this.btnIslas);
+            this.panel1.Controls.Add(this.button1);
+            this.panel1.Location = new System.Drawing.Point(0, -1);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(900, 81);
+            this.panel1.TabIndex = 22;
+            // 
+            // lblNombreUser
+            // 
+            this.lblNombreUser.AutoSize = true;
+            this.lblNombreUser.Font = new System.Drawing.Font("Poppins", 8.25F);
+            this.lblNombreUser.Location = new System.Drawing.Point(678, 25);
+            this.lblNombreUser.Name = "lblNombreUser";
+            this.lblNombreUser.Size = new System.Drawing.Size(202, 30);
+            this.lblNombreUser.TabIndex = 10;
+            this.lblNombreUser.Text = ":nombre_del_usuario:";
+            // 
+            // btnVendedores
+            // 
+            this.btnVendedores.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(120)))), ((int)(((byte)(59)))));
+            this.btnVendedores.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnVendedores.Font = new System.Drawing.Font("Poppins", 8.25F);
+            this.btnVendedores.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btnVendedores.Location = new System.Drawing.Point(544, 0);
+            this.btnVendedores.Name = "btnVendedores";
+            this.btnVendedores.Size = new System.Drawing.Size(128, 81);
+            this.btnVendedores.TabIndex = 5;
+            this.btnVendedores.Text = "Vendedores";
+            this.btnVendedores.UseVisualStyleBackColor = false;
+            // 
+            // btnUsers
+            // 
+            this.btnUsers.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(120)))), ((int)(((byte)(59)))));
+            this.btnUsers.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnUsers.Font = new System.Drawing.Font("Poppins", 8.25F);
+            this.btnUsers.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btnUsers.Location = new System.Drawing.Point(415, 0);
+            this.btnUsers.Name = "btnUsers";
+            this.btnUsers.Size = new System.Drawing.Size(129, 81);
+            this.btnUsers.TabIndex = 4;
+            this.btnUsers.Text = "Usuarios";
+            this.btnUsers.UseVisualStyleBackColor = false;
+            // 
+            // btnTipos
+            // 
+            this.btnTipos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(120)))), ((int)(((byte)(59)))));
+            this.btnTipos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTipos.Font = new System.Drawing.Font("Poppins", 8.25F);
+            this.btnTipos.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btnTipos.Location = new System.Drawing.Point(225, 0);
+            this.btnTipos.Name = "btnTipos";
+            this.btnTipos.Size = new System.Drawing.Size(85, 81);
+            this.btnTipos.TabIndex = 3;
+            this.btnTipos.Text = "Tipos";
+            this.btnTipos.UseVisualStyleBackColor = false;
+            // 
+            // btnTanques
+            // 
+            this.btnTanques.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(120)))), ((int)(((byte)(59)))));
+            this.btnTanques.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTanques.Font = new System.Drawing.Font("Poppins", 8.25F);
+            this.btnTanques.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btnTanques.Location = new System.Drawing.Point(310, 0);
+            this.btnTanques.Name = "btnTanques";
+            this.btnTanques.Size = new System.Drawing.Size(105, 81);
+            this.btnTanques.TabIndex = 2;
+            this.btnTanques.Text = "Tanques";
+            this.btnTanques.UseVisualStyleBackColor = false;
+            // 
+            // btnIslas
+            // 
+            this.btnIslas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(120)))), ((int)(((byte)(59)))));
+            this.btnIslas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnIslas.Font = new System.Drawing.Font("Poppins", 8.25F);
+            this.btnIslas.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btnIslas.Location = new System.Drawing.Point(120, 0);
+            this.btnIslas.Name = "btnIslas";
+            this.btnIslas.Size = new System.Drawing.Size(105, 81);
+            this.btnIslas.TabIndex = 1;
+            this.btnIslas.Text = "Islas";
+            this.btnIslas.UseVisualStyleBackColor = false;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(120)))), ((int)(((byte)(59)))));
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Poppins", 8.25F);
+            this.button1.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.button1.Location = new System.Drawing.Point(0, 0);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(120, 81);
+            this.button1.TabIndex = 0;
+            this.button1.Text = "Sucursales";
+            this.button1.UseVisualStyleBackColor = false;
+            // 
             // CRUD_Islas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.roundPanel3);
             this.Controls.Add(this.roundPanel2);
             this.Controls.Add(this.roundPanel1);
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "CRUD_Islas";
             this.Size = new System.Drawing.Size(900, 625);
+            this.Load += new System.EventHandler(this.CRUD_Islas_Load);
             this.roundPanel1.ResumeLayout(false);
             this.roundPanel1.PerformLayout();
             this.roundPanel2.ResumeLayout(false);
             this.roundPanel2.PerformLayout();
             this.roundPanel3.ResumeLayout(false);
             this.roundPanel3.PerformLayout();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -259,5 +377,13 @@
         private Elementos.RoundPanel roundPanel3;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label lblNombreUser;
+        private System.Windows.Forms.Button btnVendedores;
+        private System.Windows.Forms.Button btnUsers;
+        private System.Windows.Forms.Button btnTipos;
+        private System.Windows.Forms.Button btnTanques;
+        private System.Windows.Forms.Button btnIslas;
+        private System.Windows.Forms.Button button1;
     }
 }

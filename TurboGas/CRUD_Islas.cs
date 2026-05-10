@@ -16,5 +16,20 @@ namespace TurboGas
         {
             InitializeComponent();
         }
+
+        private void btnCreate_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnUpd_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void CRUD_Islas_Load(object sender, EventArgs e)
+        {
+            lblNombreUser.Text = Sesion.UserNombre;
+        }
     }
 }
