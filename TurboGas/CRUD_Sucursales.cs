@@ -35,15 +35,7 @@ namespace TurboGas
 
         private void VerificarPermiso()
         {
-            if(lblPermisos.Text == "usuario")
-            {
-                rndPanelAct.Hide();
-                rndDel.Hide();
-            }
-            else if (lblPermisos.Text == "Administrador del sistema")
-            {
-                rndDel.Hide();
-            }
+            
         }
 
         private void btnRegistrarSucursales_Click(object sender, EventArgs e)
@@ -88,7 +80,6 @@ namespace TurboGas
             {
                 MessageBox.Show("Error" + ex.Message);
             }
-
             MessageBox.Show("Sucursal Creada", "Sucursal creada con exito", MessageBoxButtons.OK);
         }
 
@@ -274,7 +265,7 @@ namespace TurboGas
 
         private void CRUD_Sucursales_Load(object sender, EventArgs e)
         {
-            lblNombre.Text = Sesion.UserNombre;
+            lblNombreUser.Text = Sesion.UserNombre;
         }
 
         private void btnBorrarSucursales_Click(object sender, EventArgs e)
@@ -310,6 +301,40 @@ namespace TurboGas
             txtStaSucUpd.Text = null;
             txtCpSucUpd.Text = null;
             txtTelSucUpd.Text = null;
+        }
+
+        private void btnIslas_Click(object sender, EventArgs e)
+        {
+            Control contenedor = this.Parent; // Funciona con cualquier tipo
+
+            if (contenedor != null)
+            {
+                contenedor.Controls.Clear();
+                CRUD_Islas CRUDIsl = new CRUD_Islas();
+                CRUDIsl.Dock = DockStyle.Fill;
+                contenedor.Controls.Add(CRUDIsl);
+            }
+            else
+            {
+                MessageBox.Show("No se encontró contenedor padre.");
+            }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Control contenedor = this.Parent; // Funciona con cualquier tipo
+
+            if (contenedor != null)
+            {
+                contenedor.Controls.Clear();
+                CRUD_Bombas CRUDBom = new CRUD_Bombas();
+                CRUDBom.Dock = DockStyle.Fill;
+                contenedor.Controls.Add(CRUDBom);
+            }
+            else
+            {
+                MessageBox.Show("No se encontró contenedor padre.");
+            }
         }
     }
 }

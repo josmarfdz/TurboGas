@@ -44,31 +44,38 @@
             this.rndCreation = new TurboGas.Elementos.RoundPanel();
             this.rdCreate = new System.Windows.Forms.RadioButton();
             this.rndPanelAct = new TurboGas.Elementos.RoundPanel();
-            this.rdAct = new System.Windows.Forms.RadioButton();
+            this.label7 = new System.Windows.Forms.Label();
             this.btnActSucursales = new TurboGas.Elementos.Botón();
+            this.label8 = new System.Windows.Forms.Label();
             this.cmbSucId1 = new System.Windows.Forms.ComboBox();
+            this.label9 = new System.Windows.Forms.Label();
             this.txtSucUpd = new TurboGas.Elementos.textbox();
+            this.label10 = new System.Windows.Forms.Label();
             this.txtAddressSucUpd = new TurboGas.Elementos.textbox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
             this.txtTelSucUpd = new TurboGas.Elementos.textbox();
             this.txtCitSucUpd = new TurboGas.Elementos.textbox();
             this.txtCpSucUpd = new TurboGas.Elementos.textbox();
             this.txtStaSucUpd = new TurboGas.Elementos.textbox();
+            this.rdAct = new System.Windows.Forms.RadioButton();
             this.rndDel = new TurboGas.Elementos.RoundPanel();
             this.btnBorrarSucursales = new TurboGas.Elementos.Botón();
             this.label18 = new System.Windows.Forms.Label();
             this.cmbSucId2 = new System.Windows.Forms.ComboBox();
             this.rdDelete = new System.Windows.Forms.RadioButton();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.lblNombre = new System.Windows.Forms.Label();
-            this.lblPermisos = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.lblNombreUser = new System.Windows.Forms.Label();
+            this.btnVendedores = new System.Windows.Forms.Button();
+            this.btnUsers = new System.Windows.Forms.Button();
+            this.btnTipos = new System.Windows.Forms.Button();
+            this.btnTanques = new System.Windows.Forms.Button();
+            this.btnIslas = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.rndCreation.SuspendLayout();
             this.rndPanelAct.SuspendLayout();
             this.rndDel.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // txtBoxRegName
@@ -217,7 +224,7 @@
             this.rndCreation.Controls.Add(this.label3);
             this.rndCreation.Controls.Add(this.label4);
             this.rndCreation.Controls.Add(this.txtRegEstado);
-            this.rndCreation.Location = new System.Drawing.Point(18, 53);
+            this.rndCreation.Location = new System.Drawing.Point(28, 149);
             this.rndCreation.Name = "rndCreation";
             this.rndCreation.Size = new System.Drawing.Size(302, 505);
             this.rndCreation.TabIndex = 27;
@@ -226,7 +233,7 @@
             // 
             this.rdCreate.AutoSize = true;
             this.rdCreate.Font = new System.Drawing.Font("Poppins", 8.25F);
-            this.rdCreate.Location = new System.Drawing.Point(76, 13);
+            this.rdCreate.Location = new System.Drawing.Point(86, 109);
             this.rdCreate.Name = "rdCreate";
             this.rdCreate.Size = new System.Drawing.Size(191, 34);
             this.rdCreate.TabIndex = 29;
@@ -251,22 +258,20 @@
             this.rndPanelAct.Controls.Add(this.txtCitSucUpd);
             this.rndPanelAct.Controls.Add(this.txtCpSucUpd);
             this.rndPanelAct.Controls.Add(this.txtStaSucUpd);
-            this.rndPanelAct.Location = new System.Drawing.Point(326, 53);
+            this.rndPanelAct.Location = new System.Drawing.Point(336, 149);
             this.rndPanelAct.Name = "rndPanelAct";
             this.rndPanelAct.Size = new System.Drawing.Size(271, 553);
             this.rndPanelAct.TabIndex = 29;
             // 
-            // rdAct
+            // label7
             // 
-            this.rdAct.AutoSize = true;
-            this.rdAct.Font = new System.Drawing.Font("Poppins", 8.25F);
-            this.rdAct.Location = new System.Drawing.Point(381, 13);
-            this.rdAct.Name = "rdAct";
-            this.rdAct.Size = new System.Drawing.Size(150, 34);
-            this.rdAct.TabIndex = 31;
-            this.rdAct.TabStop = true;
-            this.rdAct.Text = "Actualizacion";
-            this.rdAct.UseVisualStyleBackColor = true;
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Poppins", 8.25F);
+            this.label7.Location = new System.Drawing.Point(16, 371);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(74, 30);
+            this.label7.TabIndex = 17;
+            this.label7.Text = "Codigo";
             // 
             // btnActSucursales
             // 
@@ -284,6 +289,16 @@
             this.btnActSucursales.UseVisualStyleBackColor = false;
             this.btnActSucursales.Click += new System.EventHandler(this.btnActSucursales_Click);
             // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Poppins", 8.25F);
+            this.label8.Location = new System.Drawing.Point(16, 75);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(82, 30);
+            this.label8.TabIndex = 13;
+            this.label8.Text = "Nombre";
+            // 
             // cmbSucId1
             // 
             this.cmbSucId1.FormattingEnabled = true;
@@ -291,6 +306,16 @@
             this.cmbSucId1.Name = "cmbSucId1";
             this.cmbSucId1.Size = new System.Drawing.Size(200, 28);
             this.cmbSucId1.TabIndex = 29;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Poppins", 8.25F);
+            this.label9.Location = new System.Drawing.Point(16, 442);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(87, 30);
+            this.label9.TabIndex = 18;
+            this.label9.Text = "Telefono";
             // 
             // txtSucUpd
             // 
@@ -301,6 +326,16 @@
             this.txtSucUpd.Size = new System.Drawing.Size(150, 42);
             this.txtSucUpd.TabIndex = 0;
             // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Poppins", 8.25F);
+            this.label10.Location = new System.Drawing.Point(16, 147);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(92, 30);
+            this.label10.TabIndex = 14;
+            this.label10.Text = "Direccion";
+            // 
             // txtAddressSucUpd
             // 
             this.txtAddressSucUpd.BackColor = System.Drawing.Color.White;
@@ -309,6 +344,26 @@
             this.txtAddressSucUpd.Padding = new System.Windows.Forms.Padding(10);
             this.txtAddressSucUpd.Size = new System.Drawing.Size(150, 42);
             this.txtAddressSucUpd.TabIndex = 3;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Poppins", 8.25F);
+            this.label11.Location = new System.Drawing.Point(16, 224);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(74, 30);
+            this.label11.TabIndex = 15;
+            this.label11.Text = "Ciudad";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Poppins", 8.25F);
+            this.label12.Location = new System.Drawing.Point(16, 298);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(70, 30);
+            this.label12.TabIndex = 16;
+            this.label12.Text = "Estado";
             // 
             // txtTelSucUpd
             // 
@@ -346,13 +401,25 @@
             this.txtStaSucUpd.Size = new System.Drawing.Size(150, 42);
             this.txtStaSucUpd.TabIndex = 7;
             // 
+            // rdAct
+            // 
+            this.rdAct.AutoSize = true;
+            this.rdAct.Font = new System.Drawing.Font("Poppins", 8.25F);
+            this.rdAct.Location = new System.Drawing.Point(391, 109);
+            this.rdAct.Name = "rdAct";
+            this.rdAct.Size = new System.Drawing.Size(150, 34);
+            this.rdAct.TabIndex = 31;
+            this.rdAct.TabStop = true;
+            this.rdAct.Text = "Actualizacion";
+            this.rdAct.UseVisualStyleBackColor = true;
+            // 
             // rndDel
             // 
             this.rndDel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.rndDel.Controls.Add(this.btnBorrarSucursales);
             this.rndDel.Controls.Add(this.label18);
             this.rndDel.Controls.Add(this.cmbSucId2);
-            this.rndDel.Location = new System.Drawing.Point(603, 55);
+            this.rndDel.Location = new System.Drawing.Point(613, 151);
             this.rndDel.Name = "rndDel";
             this.rndDel.Size = new System.Drawing.Size(209, 182);
             this.rndDel.TabIndex = 30;
@@ -395,7 +462,7 @@
             // 
             this.rdDelete.AutoSize = true;
             this.rdDelete.Font = new System.Drawing.Font("Poppins", 8.25F);
-            this.rdDelete.Location = new System.Drawing.Point(663, 13);
+            this.rdDelete.Location = new System.Drawing.Point(673, 109);
             this.rdDelete.Name = "rdDelete";
             this.rdDelete.Size = new System.Drawing.Size(104, 34);
             this.rdDelete.TabIndex = 32;
@@ -403,90 +470,116 @@
             this.rdDelete.Text = "Borrado";
             this.rdDelete.UseVisualStyleBackColor = true;
             // 
-            // label7
+            // panel1
             // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Poppins", 8.25F);
-            this.label7.Location = new System.Drawing.Point(16, 371);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(74, 30);
-            this.label7.TabIndex = 17;
-            this.label7.Text = "Codigo";
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(120)))), ((int)(((byte)(59)))));
+            this.panel1.Controls.Add(this.lblNombreUser);
+            this.panel1.Controls.Add(this.btnVendedores);
+            this.panel1.Controls.Add(this.btnUsers);
+            this.panel1.Controls.Add(this.btnTipos);
+            this.panel1.Controls.Add(this.btnTanques);
+            this.panel1.Controls.Add(this.btnIslas);
+            this.panel1.Controls.Add(this.button1);
+            this.panel1.Location = new System.Drawing.Point(28, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(900, 81);
+            this.panel1.TabIndex = 35;
             // 
-            // label8
+            // lblNombreUser
             // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Poppins", 8.25F);
-            this.label8.Location = new System.Drawing.Point(16, 75);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(82, 30);
-            this.label8.TabIndex = 13;
-            this.label8.Text = "Nombre";
+            this.lblNombreUser.AutoSize = true;
+            this.lblNombreUser.Font = new System.Drawing.Font("Poppins", 8.25F);
+            this.lblNombreUser.Location = new System.Drawing.Point(678, 25);
+            this.lblNombreUser.Name = "lblNombreUser";
+            this.lblNombreUser.Size = new System.Drawing.Size(202, 30);
+            this.lblNombreUser.TabIndex = 10;
+            this.lblNombreUser.Text = ":nombre_del_usuario:";
             // 
-            // label9
+            // btnVendedores
             // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Poppins", 8.25F);
-            this.label9.Location = new System.Drawing.Point(16, 442);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(87, 30);
-            this.label9.TabIndex = 18;
-            this.label9.Text = "Telefono";
+            this.btnVendedores.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(120)))), ((int)(((byte)(59)))));
+            this.btnVendedores.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnVendedores.Font = new System.Drawing.Font("Poppins", 8.25F);
+            this.btnVendedores.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btnVendedores.Location = new System.Drawing.Point(544, 0);
+            this.btnVendedores.Name = "btnVendedores";
+            this.btnVendedores.Size = new System.Drawing.Size(128, 81);
+            this.btnVendedores.TabIndex = 5;
+            this.btnVendedores.Text = "Vendedores";
+            this.btnVendedores.UseVisualStyleBackColor = false;
             // 
-            // label10
+            // btnUsers
             // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Poppins", 8.25F);
-            this.label10.Location = new System.Drawing.Point(16, 147);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(92, 30);
-            this.label10.TabIndex = 14;
-            this.label10.Text = "Direccion";
+            this.btnUsers.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(120)))), ((int)(((byte)(59)))));
+            this.btnUsers.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnUsers.Font = new System.Drawing.Font("Poppins", 8.25F);
+            this.btnUsers.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btnUsers.Location = new System.Drawing.Point(415, 0);
+            this.btnUsers.Name = "btnUsers";
+            this.btnUsers.Size = new System.Drawing.Size(129, 81);
+            this.btnUsers.TabIndex = 4;
+            this.btnUsers.Text = "Usuarios";
+            this.btnUsers.UseVisualStyleBackColor = false;
             // 
-            // label11
+            // btnTipos
             // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Poppins", 8.25F);
-            this.label11.Location = new System.Drawing.Point(16, 224);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(74, 30);
-            this.label11.TabIndex = 15;
-            this.label11.Text = "Ciudad";
+            this.btnTipos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(120)))), ((int)(((byte)(59)))));
+            this.btnTipos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTipos.Font = new System.Drawing.Font("Poppins", 8.25F);
+            this.btnTipos.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btnTipos.Location = new System.Drawing.Point(225, 0);
+            this.btnTipos.Name = "btnTipos";
+            this.btnTipos.Size = new System.Drawing.Size(85, 81);
+            this.btnTipos.TabIndex = 3;
+            this.btnTipos.Text = "Tipos";
+            this.btnTipos.UseVisualStyleBackColor = false;
             // 
-            // label12
+            // btnTanques
             // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Poppins", 8.25F);
-            this.label12.Location = new System.Drawing.Point(16, 298);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(70, 30);
-            this.label12.TabIndex = 16;
-            this.label12.Text = "Estado";
+            this.btnTanques.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(120)))), ((int)(((byte)(59)))));
+            this.btnTanques.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTanques.Font = new System.Drawing.Font("Poppins", 8.25F);
+            this.btnTanques.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btnTanques.Location = new System.Drawing.Point(310, 0);
+            this.btnTanques.Name = "btnTanques";
+            this.btnTanques.Size = new System.Drawing.Size(105, 81);
+            this.btnTanques.TabIndex = 2;
+            this.btnTanques.Text = "Tanques";
+            this.btnTanques.UseVisualStyleBackColor = false;
             // 
-            // lblNombre
+            // btnIslas
             // 
-            this.lblNombre.AutoSize = true;
-            this.lblNombre.Location = new System.Drawing.Point(631, 277);
-            this.lblNombre.Name = "lblNombre";
-            this.lblNombre.Size = new System.Drawing.Size(65, 20);
-            this.lblNombre.TabIndex = 33;
-            this.lblNombre.Text = "Nombre";
+            this.btnIslas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(120)))), ((int)(((byte)(59)))));
+            this.btnIslas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnIslas.Font = new System.Drawing.Font("Poppins", 8.25F);
+            this.btnIslas.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btnIslas.Location = new System.Drawing.Point(120, 0);
+            this.btnIslas.Name = "btnIslas";
+            this.btnIslas.Size = new System.Drawing.Size(105, 81);
+            this.btnIslas.TabIndex = 1;
+            this.btnIslas.Text = "Islas";
+            this.btnIslas.UseVisualStyleBackColor = false;
+            this.btnIslas.Click += new System.EventHandler(this.btnIslas_Click);
             // 
-            // lblPermisos
+            // button1
             // 
-            this.lblPermisos.AutoSize = true;
-            this.lblPermisos.Location = new System.Drawing.Point(635, 317);
-            this.lblPermisos.Name = "lblPermisos";
-            this.lblPermisos.Size = new System.Drawing.Size(74, 20);
-            this.lblPermisos.TabIndex = 34;
-            this.lblPermisos.Text = "Permisos";
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(120)))), ((int)(((byte)(59)))));
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Poppins", 8.25F);
+            this.button1.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.button1.Location = new System.Drawing.Point(0, 0);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(120, 81);
+            this.button1.TabIndex = 0;
+            this.button1.Text = "Bombas";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // CRUD_Sucursales
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.lblPermisos);
-            this.Controls.Add(this.lblNombre);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.rdDelete);
             this.Controls.Add(this.rdCreate);
             this.Controls.Add(this.rdAct);
@@ -503,6 +596,8 @@
             this.rndPanelAct.PerformLayout();
             this.rndDel.ResumeLayout(false);
             this.rndDel.PerformLayout();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -546,7 +641,13 @@
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Label lblNombre;
-        private System.Windows.Forms.Label lblPermisos;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label lblNombreUser;
+        private System.Windows.Forms.Button btnVendedores;
+        private System.Windows.Forms.Button btnUsers;
+        private System.Windows.Forms.Button btnTipos;
+        private System.Windows.Forms.Button btnTanques;
+        private System.Windows.Forms.Button btnIslas;
+        private System.Windows.Forms.Button button1;
     }
 }
