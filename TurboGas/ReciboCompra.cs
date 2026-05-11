@@ -13,7 +13,7 @@ namespace TurboGas
     {
         string code;
         double total, subtotal, iva, tipoDouble;
-        string contraseña = Environment.GetEnvironmentVariable("");
+        string contraseña = Environment.GetEnvironmentVariable("SMRC_PASS");
         DateTime fecha = DateTime.Now;
 
         public void Cálculos(string tipo, double cantidad)
