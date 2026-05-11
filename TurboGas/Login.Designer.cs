@@ -183,6 +183,7 @@
             this.ucSucursales.Name = "ucSucursales";
             this.ucSucursales.Size = new System.Drawing.Size(900, 625);
             this.ucSucursales.TabIndex = 10;
+            this.ucSucursales.Load += new System.EventHandler(this.ucSucursales_Load);
             // 
             // Login
             // 

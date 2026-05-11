@@ -22,13 +22,13 @@ namespace TurboGas
 
         private void btnCreate_Click(object sender, EventArgs e)
         {
-            string sucur = cmbCreSucursal.Text;
+            int sucur = Convert.ToInt16(cmbCreSucursal.SelectedValue);
             CrearIsla(sucur);
         }
 
-        private void CrearIsla(string sucursal)
+        private void CrearIsla(int sucursal)
         {
-            string query = "INSERT INTO Islas(sucursal_id_isla) VALUES(@sucursal)";
+            string query = "INSERT INTO Islas(sucursal_id_sucursal) VALUES(@sucursal)";
 
             try
             {

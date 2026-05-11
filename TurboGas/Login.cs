@@ -97,5 +97,10 @@ namespace TurboGas
                 }
             }
         }
+
+        private void ucSucursales_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

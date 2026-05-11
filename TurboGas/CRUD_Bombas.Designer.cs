@@ -299,6 +299,7 @@
             this.btnUpdate.TabIndex = 10;
             this.btnUpdate.Text = "Actualizar Bomba";
             this.btnUpdate.UseVisualStyleBackColor = false;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // label3
             // 
@@ -358,6 +359,10 @@
             // cmbUAct
             // 
             this.cmbUAct.FormattingEnabled = true;
+            this.cmbUAct.Items.AddRange(new object[] {
+            "Activa",
+            "Inactiva",
+            "En reparacion"});
             this.cmbUAct.Location = new System.Drawing.Point(221, 167);
             this.cmbUAct.Name = "cmbUAct";
             this.cmbUAct.Size = new System.Drawing.Size(199, 28);
