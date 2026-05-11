@@ -148,6 +148,12 @@
     <Compile Include="SignIn.Designer.cs">
       <DependentUpon>SignIn.cs</DependentUpon>
     </Compile>
+    <Compile Include="SistemaBomba.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SistemaBomba.Designer.cs">
+      <DependentUpon>SistemaBomba.cs</DependentUpon>
+    </Compile>
     <Compile Include="Sucursales.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -201,6 +207,9 @@
     </Compile>
     <EmbeddedResource Include="SignIn.resx">
       <DependentUpon>SignIn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SistemaBomba.resx">
+      <DependentUpon>SistemaBomba.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Sucursales.resx">
       <DependentUpon>Sucursales.cs</DependentUpon>
