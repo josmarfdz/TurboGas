@@ -24,6 +24,7 @@ namespace TurboGas
 
             cmbSucursal.SelectedIndexChanged += cmbSucursal_SelectedIndexChanged;
             cmbUIsla.SelectedIndexChanged += cmbIslaU_SelectedIndexChanged;
+            cmbDIsla.SelectedIndexChanged += cmbIslaD_SelectedIndexChanged;
         }
 
         private void btnCreate_Click(object sender, EventArgs e)
@@ -85,7 +86,74 @@ namespace TurboGas
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
+            if (cmbDBomba.SelectedValue == null)
+            {
+                MessageBox.Show("Selecciona una bomba.");
+                return;
+            }
 
+            // Confirmación antes de borrar
+            var confirm = MessageBox.Show("¿Seguro que deseas eliminar esta bomba?",
+                                           "Confirmar", MessageBoxButtons.YesNo);
+            if (confirm == DialogResult.Yes)
+            {
+                EliminarBomba();
+            }
+        }
+
+        private void EliminarBomba()
+        {
+            string query = "DELETE FROM bombas WHERE id_bomba = @IdBomba";
+            try
+            {
+                using (MySqlConnection cnc = new MySqlConnection(bdd))
+                {
+                    cnc.Open();
+                    MySqlCommand cmd = new MySqlCommand(query, cnc);
+                    cmd.Parameters.AddWithValue("@IdBomba", cmbDBomba.SelectedValue);
+                    cmd.ExecuteNonQuery();
+                    MessageBox.Show("Bomba eliminada correctamente.");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void LlenarComboBombaDel(int idIsla)
+        {
+            string query = "SELECT id_bomba FROM bombas WHERE isla_id = @id_isla";
+            try
+            {
+                using (MySqlConnection cnc = new MySqlConnection(bdd))
+                {
+                    cnc.Open();
+                    MySqlCommand cmd = new MySqlCommand(query, cnc);
+                    cmd.Parameters.AddWithValue("@id_isla", idIsla);
+                    MySqlDataAdapter adapatar = new MySqlDataAdapter(cmd);
+                    DataTable dataTable = new DataTable();
+
+                    adapatar.Fill(dataTable);
+
+                    cmbDBomba.DataSource = null;
+                    cmbDBomba.DataSource = dataTable;
+                    cmbDBomba.DisplayMember = "id_bomba";
+                    cmbDBomba.ValueMember = "id_bomba";
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error" + ex.Message);
+            }
+        }
+
+        private void cmbIslaD_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cmbDIsla.SelectedValue != null && cmbDIsla.SelectedValue is int id_Isla)
+            {
+                LlenarComboBombaDel(id_Isla);
+            }
         }
 
         private void CRUD_Bombas_Load(object sender, EventArgs e)
@@ -129,7 +197,53 @@ namespace TurboGas
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
+            string bomb = cmbUBomba.Text;
+            string isl = cmbUIsla.Text;
+            string numero = txtUNum.Text;
+            int activ = 0;
 
+
+            // Activa
+            //Inactiva
+            //En reparacion
+
+            if (cmbUAct.Text == "Activa")
+            {
+                activ = 1;
+            }
+            else if (cmbUAct.Text == "Inactiva")
+            {
+                activ = 0;
+            }
+            else if (cmbUAct.Text == "En reparacion")
+            {
+                activ = 2;
+            }
+
+
+            ActualizarBomba(numero, activ);
+
+        }
+
+        private void ActualizarBomba(string nume, int act)
+        {
+            string query = "UPDATE bombas SET numero = @Num, activa = @Act WHERE id_bomba = @IdBomba";
+            try
+            {
+                using (MySqlConnection cnc = new MySqlConnection(bdd))
+                {
+                    cnc.Open();
+                    MySqlCommand cmd = new MySqlCommand(query, cnc);
+                    cmd.Parameters.AddWithValue("@Num", nume);
+                    cmd.Parameters.AddWithValue("@Act", act);
+                    cmd.Parameters.AddWithValue("@IdBomba", cmbUBomba.SelectedValue);                    
+                    cmd.ExecuteNonQuery();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private void LlenarComboBoxUpdateBomba(int isla)
@@ -223,6 +337,12 @@ namespace TurboGas
                         cmbUIsla.DataSource = dataTable.Copy();
                         cmbUIsla.DisplayMember = "id_isla";
                         cmbUIsla.ValueMember = "id_isla";
+
+                        cmbDIsla.DataSource = null;
+                        cmbDIsla.DataSource = new DataTable(); // reset
+                        cmbDIsla.DataSource = dataTable.Copy();
+                        cmbDIsla.DisplayMember = "id_isla";
+                        cmbDIsla.ValueMember = "id_isla";
                     }
                 }
             }

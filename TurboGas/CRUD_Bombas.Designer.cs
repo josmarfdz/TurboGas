@@ -61,6 +61,8 @@
             this.txtCNum = new TurboGas.Elementos.textbox();
             this.label2 = new System.Windows.Forms.Label();
             this.cmbCIsla = new System.Windows.Forms.ComboBox();
+            this.cmbDIsla = new System.Windows.Forms.ComboBox();
+            this.label9 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.roundPanel1.SuspendLayout();
             this.rndUpdate.SuspendLayout();
@@ -226,12 +228,14 @@
             // roundPanel1
             // 
             this.roundPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.roundPanel1.Controls.Add(this.cmbDIsla);
+            this.roundPanel1.Controls.Add(this.label9);
             this.roundPanel1.Controls.Add(this.btnDelete);
             this.roundPanel1.Controls.Add(this.cmbDBomba);
             this.roundPanel1.Controls.Add(this.label7);
             this.roundPanel1.Location = new System.Drawing.Point(464, 128);
             this.roundPanel1.Name = "roundPanel1";
-            this.roundPanel1.Size = new System.Drawing.Size(411, 108);
+            this.roundPanel1.Size = new System.Drawing.Size(411, 165);
             this.roundPanel1.TabIndex = 17;
             // 
             // btnDelete
@@ -242,7 +246,7 @@
             this.btnDelete.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(165)))), ((int)(((byte)(125)))));
             this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDelete.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.btnDelete.Location = new System.Drawing.Point(126, 54);
+            this.btnDelete.Location = new System.Drawing.Point(128, 109);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(150, 39);
             this.btnDelete.TabIndex = 10;
@@ -253,16 +257,16 @@
             // cmbDBomba
             // 
             this.cmbDBomba.FormattingEnabled = true;
-            this.cmbDBomba.Location = new System.Drawing.Point(197, 14);
+            this.cmbDBomba.Location = new System.Drawing.Point(243, 69);
             this.cmbDBomba.Name = "cmbDBomba";
-            this.cmbDBomba.Size = new System.Drawing.Size(199, 28);
+            this.cmbDBomba.Size = new System.Drawing.Size(133, 28);
             this.cmbDBomba.TabIndex = 14;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Poppins", 8.25F);
-            this.label7.Location = new System.Drawing.Point(14, 14);
+            this.label7.Location = new System.Drawing.Point(16, 69);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(146, 30);
             this.label7.TabIndex = 11;
@@ -444,6 +448,24 @@
             this.cmbCIsla.Size = new System.Drawing.Size(199, 28);
             this.cmbCIsla.TabIndex = 9;
             // 
+            // cmbDIsla
+            // 
+            this.cmbDIsla.FormattingEnabled = true;
+            this.cmbDIsla.Location = new System.Drawing.Point(243, 29);
+            this.cmbDIsla.Name = "cmbDIsla";
+            this.cmbDIsla.Size = new System.Drawing.Size(133, 28);
+            this.cmbDIsla.TabIndex = 16;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Poppins", 8.25F);
+            this.label9.Location = new System.Drawing.Point(16, 29);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(208, 30);
+            this.label9.TabIndex = 15;
+            this.label9.Text = "Isla a la que pertenece";
+            // 
             // CRUD_Bombas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -508,5 +530,7 @@
         private System.Windows.Forms.Label lblNombreUser;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.ComboBox cmbSucursal;
+        private System.Windows.Forms.ComboBox cmbDIsla;
+        private System.Windows.Forms.Label label9;
     }
 }
