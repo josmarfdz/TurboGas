@@ -30,13 +30,13 @@
         {
             this.btnCreate = new TurboGas.Elementos.Botón();
             this.label1 = new System.Windows.Forms.Label();
-            this.cmbCreSucursal = new System.Windows.Forms.ComboBox();
-            this.cmbUpdSuc = new System.Windows.Forms.ComboBox();
+            this.cmbCSucursal = new System.Windows.Forms.ComboBox();
+            this.cmbUSuc = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.btnUpd = new TurboGas.Elementos.Botón();
-            this.cmbUpdBomba = new System.Windows.Forms.ComboBox();
+            this.cmbUIsla = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.cmbDelBomb = new System.Windows.Forms.ComboBox();
+            this.cmbDIsla = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
             this.btnDel = new TurboGas.Elementos.Botón();
             this.roundPanel1 = new TurboGas.Elementos.RoundPanel();
@@ -44,13 +44,15 @@
             this.label5 = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.roundPanel3 = new TurboGas.Elementos.RoundPanel();
+            this.label6 = new System.Windows.Forms.Label();
+            this.cmbDSuc = new System.Windows.Forms.ComboBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.lblNombreUser = new System.Windows.Forms.Label();
             this.btnVendedores = new System.Windows.Forms.Button();
             this.btnUsers = new System.Windows.Forms.Button();
             this.btnTipos = new System.Windows.Forms.Button();
             this.btnTanques = new System.Windows.Forms.Button();
-            this.btnIslas = new System.Windows.Forms.Button();
+            this.btnBombas = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.roundPanel1.SuspendLayout();
             this.roundPanel2.SuspendLayout();
@@ -84,27 +86,27 @@
             this.label1.TabIndex = 2;
             this.label1.Text = "Sucursal a la que pertenece";
             // 
-            // cmbCreSucursal
+            // cmbCSucursal
             // 
-            this.cmbCreSucursal.FormattingEnabled = true;
-            this.cmbCreSucursal.Location = new System.Drawing.Point(271, 49);
-            this.cmbCreSucursal.Name = "cmbCreSucursal";
-            this.cmbCreSucursal.Size = new System.Drawing.Size(121, 28);
-            this.cmbCreSucursal.TabIndex = 3;
+            this.cmbCSucursal.FormattingEnabled = true;
+            this.cmbCSucursal.Location = new System.Drawing.Point(271, 49);
+            this.cmbCSucursal.Name = "cmbCSucursal";
+            this.cmbCSucursal.Size = new System.Drawing.Size(121, 28);
+            this.cmbCSucursal.TabIndex = 3;
             // 
-            // cmbUpdSuc
+            // cmbUSuc
             // 
-            this.cmbUpdSuc.FormattingEnabled = true;
-            this.cmbUpdSuc.Location = new System.Drawing.Point(271, 55);
-            this.cmbUpdSuc.Name = "cmbUpdSuc";
-            this.cmbUpdSuc.Size = new System.Drawing.Size(121, 28);
-            this.cmbUpdSuc.TabIndex = 6;
+            this.cmbUSuc.FormattingEnabled = true;
+            this.cmbUSuc.Location = new System.Drawing.Point(274, 14);
+            this.cmbUSuc.Name = "cmbUSuc";
+            this.cmbUSuc.Size = new System.Drawing.Size(121, 28);
+            this.cmbUSuc.TabIndex = 6;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Poppins", 8.25F);
-            this.label2.Location = new System.Drawing.Point(13, 55);
+            this.label2.Location = new System.Drawing.Point(16, 14);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(252, 30);
             this.label2.TabIndex = 5;
@@ -118,7 +120,7 @@
             this.btnUpd.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(165)))), ((int)(((byte)(125)))));
             this.btnUpd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnUpd.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.btnUpd.Location = new System.Drawing.Point(165, 157);
+            this.btnUpd.Location = new System.Drawing.Point(165, 154);
             this.btnUpd.Name = "btnUpd";
             this.btnUpd.Size = new System.Drawing.Size(150, 40);
             this.btnUpd.TabIndex = 4;
@@ -126,31 +128,31 @@
             this.btnUpd.UseVisualStyleBackColor = false;
             this.btnUpd.Click += new System.EventHandler(this.btnUpd_Click);
             // 
-            // cmbUpdBomba
+            // cmbUIsla
             // 
-            this.cmbUpdBomba.FormattingEnabled = true;
-            this.cmbUpdBomba.Location = new System.Drawing.Point(271, 13);
-            this.cmbUpdBomba.Name = "cmbUpdBomba";
-            this.cmbUpdBomba.Size = new System.Drawing.Size(121, 28);
-            this.cmbUpdBomba.TabIndex = 8;
+            this.cmbUIsla.FormattingEnabled = true;
+            this.cmbUIsla.Location = new System.Drawing.Point(274, 49);
+            this.cmbUIsla.Name = "cmbUIsla";
+            this.cmbUIsla.Size = new System.Drawing.Size(121, 28);
+            this.cmbUIsla.TabIndex = 8;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Poppins", 8.25F);
-            this.label3.Location = new System.Drawing.Point(13, 13);
+            this.label3.Location = new System.Drawing.Point(16, 49);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(74, 30);
+            this.label3.Size = new System.Drawing.Size(41, 30);
             this.label3.TabIndex = 7;
-            this.label3.Text = "Bomba";
+            this.label3.Text = "Isla";
             // 
-            // cmbDelBomb
+            // cmbDIsla
             // 
-            this.cmbDelBomb.FormattingEnabled = true;
-            this.cmbDelBomb.Location = new System.Drawing.Point(271, 44);
-            this.cmbDelBomb.Name = "cmbDelBomb";
-            this.cmbDelBomb.Size = new System.Drawing.Size(121, 28);
-            this.cmbDelBomb.TabIndex = 11;
+            this.cmbDIsla.FormattingEnabled = true;
+            this.cmbDIsla.Location = new System.Drawing.Point(271, 44);
+            this.cmbDIsla.Name = "cmbDIsla";
+            this.cmbDIsla.Size = new System.Drawing.Size(121, 28);
+            this.cmbDIsla.TabIndex = 11;
             // 
             // label4
             // 
@@ -158,9 +160,9 @@
             this.label4.Font = new System.Drawing.Font("Poppins", 8.25F);
             this.label4.Location = new System.Drawing.Point(9, 42);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(74, 30);
+            this.label4.Size = new System.Drawing.Size(41, 30);
             this.label4.TabIndex = 10;
-            this.label4.Text = "Bomba";
+            this.label4.Text = "Isla";
             // 
             // btnDel
             // 
@@ -179,10 +181,10 @@
             // 
             // roundPanel1
             // 
-            this.roundPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.roundPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.roundPanel1.Controls.Add(this.btnCreate);
             this.roundPanel1.Controls.Add(this.label1);
-            this.roundPanel1.Controls.Add(this.cmbCreSucursal);
+            this.roundPanel1.Controls.Add(this.cmbCSucursal);
             this.roundPanel1.Location = new System.Drawing.Point(42, 107);
             this.roundPanel1.Name = "roundPanel1";
             this.roundPanel1.Size = new System.Drawing.Size(415, 175);
@@ -190,14 +192,14 @@
             // 
             // roundPanel2
             // 
-            this.roundPanel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.roundPanel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.roundPanel2.Controls.Add(this.label5);
             this.roundPanel2.Controls.Add(this.comboBox1);
             this.roundPanel2.Controls.Add(this.btnUpd);
             this.roundPanel2.Controls.Add(this.label2);
-            this.roundPanel2.Controls.Add(this.cmbUpdSuc);
+            this.roundPanel2.Controls.Add(this.cmbUSuc);
             this.roundPanel2.Controls.Add(this.label3);
-            this.roundPanel2.Controls.Add(this.cmbUpdBomba);
+            this.roundPanel2.Controls.Add(this.cmbUIsla);
             this.roundPanel2.Location = new System.Drawing.Point(487, 107);
             this.roundPanel2.Name = "roundPanel2";
             this.roundPanel2.Size = new System.Drawing.Size(410, 215);
@@ -207,7 +209,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Poppins", 8.25F);
-            this.label5.Location = new System.Drawing.Point(16, 92);
+            this.label5.Location = new System.Drawing.Point(19, 83);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(65, 30);
             this.label5.TabIndex = 9;
@@ -216,21 +218,45 @@
             // comboBox1
             // 
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(271, 92);
+            this.comboBox1.Items.AddRange(new object[] {
+            "Activa",
+            "Inactiva",
+            "En reparacion"});
+            this.comboBox1.Location = new System.Drawing.Point(274, 83);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(121, 28);
             this.comboBox1.TabIndex = 10;
             // 
             // roundPanel3
             // 
-            this.roundPanel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.roundPanel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.roundPanel3.Controls.Add(this.label6);
+            this.roundPanel3.Controls.Add(this.cmbDSuc);
             this.roundPanel3.Controls.Add(this.btnDel);
             this.roundPanel3.Controls.Add(this.label4);
-            this.roundPanel3.Controls.Add(this.cmbDelBomb);
+            this.roundPanel3.Controls.Add(this.cmbDIsla);
             this.roundPanel3.Location = new System.Drawing.Point(487, 345);
             this.roundPanel3.Name = "roundPanel3";
             this.roundPanel3.Size = new System.Drawing.Size(410, 151);
             this.roundPanel3.TabIndex = 14;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Poppins", 8.25F);
+            this.label6.Location = new System.Drawing.Point(9, 8);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(252, 30);
+            this.label6.TabIndex = 12;
+            this.label6.Text = "Sucursal a la que pertenece";
+            // 
+            // cmbDSuc
+            // 
+            this.cmbDSuc.FormattingEnabled = true;
+            this.cmbDSuc.Location = new System.Drawing.Point(271, 10);
+            this.cmbDSuc.Name = "cmbDSuc";
+            this.cmbDSuc.Size = new System.Drawing.Size(121, 28);
+            this.cmbDSuc.TabIndex = 13;
             // 
             // panel1
             // 
@@ -240,7 +266,7 @@
             this.panel1.Controls.Add(this.btnUsers);
             this.panel1.Controls.Add(this.btnTipos);
             this.panel1.Controls.Add(this.btnTanques);
-            this.panel1.Controls.Add(this.btnIslas);
+            this.panel1.Controls.Add(this.btnBombas);
             this.panel1.Controls.Add(this.button1);
             this.panel1.Location = new System.Drawing.Point(0, -1);
             this.panel1.Name = "panel1";
@@ -282,6 +308,7 @@
             this.btnUsers.TabIndex = 4;
             this.btnUsers.Text = "Usuarios";
             this.btnUsers.UseVisualStyleBackColor = false;
+            this.btnUsers.Click += new System.EventHandler(this.btnUsers_Click);
             // 
             // btnTipos
             // 
@@ -309,18 +336,19 @@
             this.btnTanques.Text = "Tanques";
             this.btnTanques.UseVisualStyleBackColor = false;
             // 
-            // btnIslas
+            // btnBombas
             // 
-            this.btnIslas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(120)))), ((int)(((byte)(59)))));
-            this.btnIslas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnIslas.Font = new System.Drawing.Font("Poppins", 8.25F);
-            this.btnIslas.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnIslas.Location = new System.Drawing.Point(120, 0);
-            this.btnIslas.Name = "btnIslas";
-            this.btnIslas.Size = new System.Drawing.Size(105, 81);
-            this.btnIslas.TabIndex = 1;
-            this.btnIslas.Text = "Islas";
-            this.btnIslas.UseVisualStyleBackColor = false;
+            this.btnBombas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(120)))), ((int)(((byte)(59)))));
+            this.btnBombas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBombas.Font = new System.Drawing.Font("Poppins", 8.25F);
+            this.btnBombas.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btnBombas.Location = new System.Drawing.Point(120, 0);
+            this.btnBombas.Name = "btnBombas";
+            this.btnBombas.Size = new System.Drawing.Size(105, 81);
+            this.btnBombas.TabIndex = 1;
+            this.btnBombas.Text = "Bombas";
+            this.btnBombas.UseVisualStyleBackColor = false;
+            this.btnBombas.Click += new System.EventHandler(this.btnBombas_Click);
             // 
             // button1
             // 
@@ -364,13 +392,13 @@
 
         private Elementos.Botón btnCreate;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ComboBox cmbCreSucursal;
-        private System.Windows.Forms.ComboBox cmbUpdSuc;
+        private System.Windows.Forms.ComboBox cmbCSucursal;
+        private System.Windows.Forms.ComboBox cmbUSuc;
         private System.Windows.Forms.Label label2;
         private Elementos.Botón btnUpd;
-        private System.Windows.Forms.ComboBox cmbUpdBomba;
+        private System.Windows.Forms.ComboBox cmbUIsla;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.ComboBox cmbDelBomb;
+        private System.Windows.Forms.ComboBox cmbDIsla;
         private System.Windows.Forms.Label label4;
         private Elementos.Botón btnDel;
         private Elementos.RoundPanel roundPanel1;
@@ -384,7 +412,9 @@
         private System.Windows.Forms.Button btnUsers;
         private System.Windows.Forms.Button btnTipos;
         private System.Windows.Forms.Button btnTanques;
-        private System.Windows.Forms.Button btnIslas;
+        private System.Windows.Forms.Button btnBombas;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.ComboBox cmbDSuc;
     }
 }

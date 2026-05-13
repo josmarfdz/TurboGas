@@ -210,7 +210,7 @@
             // 
             // rndCreation
             // 
-            this.rndCreation.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.rndCreation.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.rndCreation.Controls.Add(this.label5);
             this.rndCreation.Controls.Add(this.txtBoxRegName);
             this.rndCreation.Controls.Add(this.label1);
@@ -243,7 +243,7 @@
             // 
             // rndPanelAct
             // 
-            this.rndPanelAct.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.rndPanelAct.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.rndPanelAct.Controls.Add(this.label7);
             this.rndPanelAct.Controls.Add(this.btnActSucursales);
             this.rndPanelAct.Controls.Add(this.label8);
@@ -260,14 +260,14 @@
             this.rndPanelAct.Controls.Add(this.txtStaSucUpd);
             this.rndPanelAct.Location = new System.Drawing.Point(336, 149);
             this.rndPanelAct.Name = "rndPanelAct";
-            this.rndPanelAct.Size = new System.Drawing.Size(271, 553);
+            this.rndPanelAct.Size = new System.Drawing.Size(271, 456);
             this.rndPanelAct.TabIndex = 29;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Poppins", 8.25F);
-            this.label7.Location = new System.Drawing.Point(16, 371);
+            this.label7.Location = new System.Drawing.Point(14, 275);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(74, 30);
             this.label7.TabIndex = 17;
@@ -281,7 +281,7 @@
             this.btnActSucursales.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(165)))), ((int)(((byte)(125)))));
             this.btnActSucursales.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnActSucursales.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.btnActSucursales.Location = new System.Drawing.Point(55, 493);
+            this.btnActSucursales.Location = new System.Drawing.Point(55, 385);
             this.btnActSucursales.Name = "btnActSucursales";
             this.btnActSucursales.Size = new System.Drawing.Size(150, 40);
             this.btnActSucursales.TabIndex = 29;
@@ -311,7 +311,7 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Poppins", 8.25F);
-            this.label9.Location = new System.Drawing.Point(16, 442);
+            this.label9.Location = new System.Drawing.Point(16, 334);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(87, 30);
             this.label9.TabIndex = 18;
@@ -330,7 +330,7 @@
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Poppins", 8.25F);
-            this.label10.Location = new System.Drawing.Point(16, 147);
+            this.label10.Location = new System.Drawing.Point(16, 131);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(92, 30);
             this.label10.TabIndex = 14;
@@ -339,7 +339,7 @@
             // txtAddressSucUpd
             // 
             this.txtAddressSucUpd.BackColor = System.Drawing.Color.White;
-            this.txtAddressSucUpd.Location = new System.Drawing.Point(109, 135);
+            this.txtAddressSucUpd.Location = new System.Drawing.Point(109, 119);
             this.txtAddressSucUpd.Name = "txtAddressSucUpd";
             this.txtAddressSucUpd.Padding = new System.Windows.Forms.Padding(10);
             this.txtAddressSucUpd.Size = new System.Drawing.Size(150, 42);
@@ -349,7 +349,7 @@
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Poppins", 8.25F);
-            this.label11.Location = new System.Drawing.Point(16, 224);
+            this.label11.Location = new System.Drawing.Point(16, 179);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(74, 30);
             this.label11.TabIndex = 15;
@@ -359,7 +359,7 @@
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Poppins", 8.25F);
-            this.label12.Location = new System.Drawing.Point(16, 298);
+            this.label12.Location = new System.Drawing.Point(16, 227);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(70, 30);
             this.label12.TabIndex = 16;
@@ -368,7 +368,7 @@
             // txtTelSucUpd
             // 
             this.txtTelSucUpd.BackColor = System.Drawing.Color.White;
-            this.txtTelSucUpd.Location = new System.Drawing.Point(109, 430);
+            this.txtTelSucUpd.Location = new System.Drawing.Point(109, 322);
             this.txtTelSucUpd.Name = "txtTelSucUpd";
             this.txtTelSucUpd.Padding = new System.Windows.Forms.Padding(10);
             this.txtTelSucUpd.Size = new System.Drawing.Size(150, 42);
@@ -377,7 +377,7 @@
             // txtCitSucUpd
             // 
             this.txtCitSucUpd.BackColor = System.Drawing.Color.White;
-            this.txtCitSucUpd.Location = new System.Drawing.Point(109, 212);
+            this.txtCitSucUpd.Location = new System.Drawing.Point(109, 167);
             this.txtCitSucUpd.Name = "txtCitSucUpd";
             this.txtCitSucUpd.Padding = new System.Windows.Forms.Padding(10);
             this.txtCitSucUpd.Size = new System.Drawing.Size(150, 42);
@@ -386,7 +386,7 @@
             // txtCpSucUpd
             // 
             this.txtCpSucUpd.BackColor = System.Drawing.Color.White;
-            this.txtCpSucUpd.Location = new System.Drawing.Point(109, 359);
+            this.txtCpSucUpd.Location = new System.Drawing.Point(107, 263);
             this.txtCpSucUpd.Name = "txtCpSucUpd";
             this.txtCpSucUpd.Padding = new System.Windows.Forms.Padding(10);
             this.txtCpSucUpd.Size = new System.Drawing.Size(150, 42);
@@ -395,7 +395,7 @@
             // txtStaSucUpd
             // 
             this.txtStaSucUpd.BackColor = System.Drawing.Color.White;
-            this.txtStaSucUpd.Location = new System.Drawing.Point(109, 286);
+            this.txtStaSucUpd.Location = new System.Drawing.Point(109, 215);
             this.txtStaSucUpd.Name = "txtStaSucUpd";
             this.txtStaSucUpd.Padding = new System.Windows.Forms.Padding(10);
             this.txtStaSucUpd.Size = new System.Drawing.Size(150, 42);
@@ -415,7 +415,7 @@
             // 
             // rndDel
             // 
-            this.rndDel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.rndDel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.rndDel.Controls.Add(this.btnBorrarSucursales);
             this.rndDel.Controls.Add(this.label18);
             this.rndDel.Controls.Add(this.cmbSucId2);
@@ -520,6 +520,7 @@
             this.btnUsers.TabIndex = 4;
             this.btnUsers.Text = "Usuarios";
             this.btnUsers.UseVisualStyleBackColor = false;
+            this.btnUsers.Click += new System.EventHandler(this.btnUsers_Click);
             // 
             // btnTipos
             // 

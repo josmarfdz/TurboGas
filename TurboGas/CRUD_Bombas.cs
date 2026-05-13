@@ -352,5 +352,21 @@ namespace TurboGas
             }
         }
 
+        private void btnUsers_Click(object sender, EventArgs e)
+        {
+            Control contenedor = this.Parent; // Funciona con cualquier tipo
+
+            if (contenedor != null)
+            {
+                contenedor.Controls.Clear();
+                CRUD_Usuarios CRUDUsr = new CRUD_Usuarios();
+                CRUDUsr.Dock = DockStyle.Fill;
+                contenedor.Controls.Add(CRUDUsr);
+            }
+            else
+            {
+                MessageBox.Show("No se encontró contenedor padre.");
+            }
+        }
     }
 }

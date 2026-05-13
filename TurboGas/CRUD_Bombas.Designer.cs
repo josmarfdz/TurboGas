@@ -42,6 +42,8 @@
             this.label8 = new System.Windows.Forms.Label();
             this.cmbSucursal = new System.Windows.Forms.ComboBox();
             this.roundPanel1 = new TurboGas.Elementos.RoundPanel();
+            this.cmbDIsla = new System.Windows.Forms.ComboBox();
+            this.label9 = new System.Windows.Forms.Label();
             this.btnDelete = new TurboGas.Elementos.Botón();
             this.cmbDBomba = new System.Windows.Forms.ComboBox();
             this.label7 = new System.Windows.Forms.Label();
@@ -61,8 +63,6 @@
             this.txtCNum = new TurboGas.Elementos.textbox();
             this.label2 = new System.Windows.Forms.Label();
             this.cmbCIsla = new System.Windows.Forms.ComboBox();
-            this.cmbDIsla = new System.Windows.Forms.ComboBox();
-            this.label9 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.roundPanel1.SuspendLayout();
             this.rndUpdate.SuspendLayout();
@@ -152,6 +152,7 @@
             this.btnUsers.TabIndex = 4;
             this.btnUsers.Text = "Usuarios";
             this.btnUsers.UseVisualStyleBackColor = false;
+            this.btnUsers.Click += new System.EventHandler(this.btnUsers_Click);
             // 
             // btnTipos
             // 
@@ -227,7 +228,7 @@
             // 
             // roundPanel1
             // 
-            this.roundPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.roundPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.roundPanel1.Controls.Add(this.cmbDIsla);
             this.roundPanel1.Controls.Add(this.label9);
             this.roundPanel1.Controls.Add(this.btnDelete);
@@ -237,6 +238,24 @@
             this.roundPanel1.Name = "roundPanel1";
             this.roundPanel1.Size = new System.Drawing.Size(411, 165);
             this.roundPanel1.TabIndex = 17;
+            // 
+            // cmbDIsla
+            // 
+            this.cmbDIsla.FormattingEnabled = true;
+            this.cmbDIsla.Location = new System.Drawing.Point(243, 29);
+            this.cmbDIsla.Name = "cmbDIsla";
+            this.cmbDIsla.Size = new System.Drawing.Size(133, 28);
+            this.cmbDIsla.TabIndex = 16;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Poppins", 8.25F);
+            this.label9.Location = new System.Drawing.Point(16, 29);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(208, 30);
+            this.label9.TabIndex = 15;
+            this.label9.Text = "Isla a la que pertenece";
             // 
             // btnDelete
             // 
@@ -274,7 +293,7 @@
             // 
             // rndUpdate
             // 
-            this.rndUpdate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.rndUpdate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.rndUpdate.Controls.Add(this.btnUpdate);
             this.rndUpdate.Controls.Add(this.label3);
             this.rndUpdate.Controls.Add(this.txtUNum);
@@ -384,7 +403,7 @@
             // 
             // rndCreate
             // 
-            this.rndCreate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.rndCreate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.rndCreate.Controls.Add(this.btnCreate);
             this.rndCreate.Controls.Add(this.label1);
             this.rndCreate.Controls.Add(this.txtCNum);
@@ -447,24 +466,6 @@
             this.cmbCIsla.Name = "cmbCIsla";
             this.cmbCIsla.Size = new System.Drawing.Size(199, 28);
             this.cmbCIsla.TabIndex = 9;
-            // 
-            // cmbDIsla
-            // 
-            this.cmbDIsla.FormattingEnabled = true;
-            this.cmbDIsla.Location = new System.Drawing.Point(243, 29);
-            this.cmbDIsla.Name = "cmbDIsla";
-            this.cmbDIsla.Size = new System.Drawing.Size(133, 28);
-            this.cmbDIsla.TabIndex = 16;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Poppins", 8.25F);
-            this.label9.Location = new System.Drawing.Point(16, 29);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(208, 30);
-            this.label9.TabIndex = 15;
-            this.label9.Text = "Isla a la que pertenece";
             // 
             // CRUD_Bombas
             // 
