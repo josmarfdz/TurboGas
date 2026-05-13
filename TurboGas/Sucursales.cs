@@ -24,22 +24,26 @@ namespace TurboGas
 
         private void botón1_Click(object sender, EventArgs e)
         {
-
+            Form2 f2 = new Form2();
+            f2.Show();
         }
 
         private void botón2_Click(object sender, EventArgs e)
         {
-
+            Form2 f2 = new Form2();
+            f2.Show();
         }
 
         private void botón3_Click(object sender, EventArgs e)
         {
-
+            Form2 f2 = new Form2();
+            f2.Show();
         }
 
         private void botón4_Click(object sender, EventArgs e)
         {
-
+            Form2 f2 = new Form2();
+            f2.Show();
         }
 
         private void btnSettings_Click(object sender, EventArgs e)

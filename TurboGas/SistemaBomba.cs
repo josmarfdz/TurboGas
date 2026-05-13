@@ -14,12 +14,18 @@ namespace TurboGas
     {
         public SistemaBomba()
         {
+            ucCRUDTanques.Hide();
             InitializeComponent();
         }
 
         string Tipo, Método, Correo;
         double Cantidad;
 
+        public string NumeroBomba
+        {
+            get { return lblBomba.Text; }
+            set { lblBomba.Text = value; }
+        }
         private void btnTransacción_Click(object sender, EventArgs e)
         {
             TipoRB();
@@ -40,6 +46,16 @@ namespace TurboGas
                 Tipo = "Diesel";
             else
                 MessageBox.Show("Seleccione un tipo de gasolina primero", "Tipo de gasolina no seleccionado", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+        }
+
+        private void btnBack_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+        }
+
+        private void btConfiguración_Click(object sender, EventArgs e)
+        {
+            ucCRUDTanques.Show();
         }
 
         public void TipoPago()
