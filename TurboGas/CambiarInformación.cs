@@ -26,6 +26,7 @@ namespace TurboGas
         private void btnConfirmar_Click(object sender, EventArgs e)
         {
             //CAMBIAR INFORMACiÓN
+
         }
 
         private void btnBack_Click(object sender, EventArgs e)
@@ -36,6 +37,11 @@ namespace TurboGas
         private void btnBack_Click_1(object sender, EventArgs e)
         {
             this.Hide();
+        }
+
+        private void ucCambiarContraseña_Load(object sender, EventArgs e)
+        {
+            
         }
     }
 }

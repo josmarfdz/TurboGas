@@ -30,8 +30,8 @@ namespace TurboGas
                     tipoDouble = 31.59;
                     break;
             }
-            total = cantidad * tipoDouble;
-            iva = total * 0.16;
+            total = Math.Round(cantidad * tipoDouble,2);
+            iva = Math.Round(total * 0.16,2);
             subtotal = total - iva;
         }
 

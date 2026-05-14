@@ -15,7 +15,7 @@ namespace TurboGas
         public Islas()
         {
             InitializeComponent();
-            ucSistemaBomba.Hide();
+            ucSistemaB.Hide();
         }
 
         private void btConfiguración_Click(object sender, EventArgs e)
@@ -35,26 +35,26 @@ namespace TurboGas
 
         private void btnBomba1_Click(object sender, EventArgs e)
         {
-            ucSistemaBomba.Show();
-            ucSistemaBomba.NumeroBomba = "Bomba #1";
+            ucSistemaB.Show();
+            ucSistemaB.NumeroBomba = "Bomba #1";
         }
 
         private void btnBomba2_Click(object sender, EventArgs e)
         {
-            ucSistemaBomba.Show();
+            ucSistemaB.Show();
             ucSistemaBomba.NumeroBomba = "Bomba #2";
         }
 
         private void btnBomba3_Click(object sender, EventArgs e)
         {
-            ucSistemaBomba.Show();
+            ucSistemaB.Show();
             ucSistemaBomba.NumeroBomba = "Bomba #3";
         }
 
         private void btnBomba4_Click(object sender, EventArgs e)
         {
-            ucSistemaBomba.Show();
-            ucSistemaBomba.NumeroBomba = "Bomba #4";
+            ucSistemaB.Show();
+            ucSistemaB.NumeroBomba = "Bomba #4";
         }
 
         private void btnInfo1_Click(object sender, EventArgs e)

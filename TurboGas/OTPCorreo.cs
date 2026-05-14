@@ -54,11 +54,18 @@ namespace TurboGas
             }
             else
             {
+                Cuenta.Correo = tbCorreo.Text;
+
                 destino = tbCorreo.Text;
                 OTP otp = new OTP();
                 otp.POTP(destino);
                 ucOTP.Show();
             }
+        }
+
+        private void ucOTP_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
