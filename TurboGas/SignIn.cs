@@ -63,6 +63,7 @@ namespace TurboGas
             string apellidoP = textbox2.Text.Trim();
             string apellidoM = textbox3.Text.Trim();
             string email = tbCorreo.Text.Trim();
+            string celular = tbTeléfono.Text.Trim();
             string password = tbContraseñas.Text.Trim();
             string confirm = tbConfirmar.Text.Trim();
 
@@ -82,7 +83,7 @@ namespace TurboGas
 
             string name = $"{nombre} {apellidoP} {apellidoM}";
 
-            InsertarNuevosUsers(name, email, passHash);
+            InsertarNuevosUsers(name, email, passHash, celular);
             MessageBox.Show("Nuevo usuario registrado", "Se ha registrado correctamente su usuario", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
@@ -91,9 +92,9 @@ namespace TurboGas
             this.Hide();
         }
 
-        public static void InsertarNuevosUsers(string us, string correo, string pass)
+        public static void InsertarNuevosUsers(string us, string correo, string pass, string tel)
         {
-            string query = "INSERT INTO usuarios_sistem(nombre, correo, contraseña) VALUES(@nombre, @correo, @contraseña)";
+            string query = "INSERT INTO usuarios_sistem(nombre, correo, contraseña, telefono) VALUES(@nombre, @correo, @contraseña, @tel)";
 
             try
             {
@@ -105,6 +106,7 @@ namespace TurboGas
                     cmd.Parameters.AddWithValue("@nombre", us);
                     cmd.Parameters.AddWithValue("@correo", correo);
                     cmd.Parameters.AddWithValue("@contraseña", pass);
+                    cmd.Parameters.AddWithValue("@tel", tel);
 
                     cmd.ExecuteNonQuery();
                 }

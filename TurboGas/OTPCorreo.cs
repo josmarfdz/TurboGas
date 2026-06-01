@@ -23,6 +23,7 @@ namespace TurboGas
             ucOTP.Hide();
         }
         string destino;
+        private string codeEsperado;
 
         private void RemovePlaceholder(object sender, EventArgs e)
         {
@@ -58,7 +59,8 @@ namespace TurboGas
 
                 destino = tbCorreo.Text;
                 OTP otp = new OTP();
-                otp.POTP(destino);
+                codeEsperado = otp.POTP(destino);
+                ucOTP._codeEsperado = codeEsperado;
                 ucOTP.Show();
             }
         }

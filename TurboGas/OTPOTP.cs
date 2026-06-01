@@ -18,6 +18,8 @@ namespace TurboGas
             ucContraseña.Hide();
         }
 
+        public string _codeEsperado {  get; set; }
+
         private void btnBack_Click(object sender, EventArgs e)
         {
             this.Hide();
@@ -25,9 +27,13 @@ namespace TurboGas
 
         private void btnConfirmar_Click(object sender, EventArgs e)
         {
-            if(tbOTP.Text == tbOTP.Text)
+            if (tbOTP.Text.Trim() == _codeEsperado.Trim())
             {
                 ucContraseña.Show();
+            }
+            else
+            {
+                MessageBox.Show("Codigo de verificacion incorrecto, vuelve a ingresar", "Error", MessageBoxButtons.OK);
             }
 
             //VERIFIACIÓN AQUÍ

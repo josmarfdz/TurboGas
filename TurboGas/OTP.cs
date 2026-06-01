@@ -50,10 +50,11 @@ namespace TurboGas
             cliente.Send(mensaje);
         }
 
-        public void POTP(string correo)
+        public string POTP(string correo)
         {
             GenerarCódigo();
             EnviarCorreo(correo);
+            return code;
         }
     }
 }
