@@ -127,6 +127,7 @@
             this.ucContraseña.Name = "ucContraseña";
             this.ucContraseña.Size = new System.Drawing.Size(900, 625);
             this.ucContraseña.TabIndex = 3;
+            this.ucContraseña.Load += new System.EventHandler(this.ucContraseña_Load);
             // 
             // OTPOTP
             // 

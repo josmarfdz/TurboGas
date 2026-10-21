@@ -179,6 +179,7 @@
             this.btnTanques.TabIndex = 2;
             this.btnTanques.Text = "Tanques";
             this.btnTanques.UseVisualStyleBackColor = false;
+            this.btnTanques.Click += new System.EventHandler(this.btnTanques_Click);
             // 
             // btnIslas
             // 

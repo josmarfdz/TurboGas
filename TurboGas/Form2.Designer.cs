@@ -34,17 +34,19 @@
             // islas1
             // 
             this.islas1.BackColor = System.Drawing.Color.White;
-            this.islas1.Location = new System.Drawing.Point(-1, 0);
+            this.islas1.Location = new System.Drawing.Point(-1, 1);
+            this.islas1.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.islas1.Name = "islas1";
-            this.islas1.Size = new System.Drawing.Size(800, 538);
+            this.islas1.Size = new System.Drawing.Size(900, 672);
             this.islas1.TabIndex = 0;
             // 
             // Form2
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 528);
+            this.ClientSize = new System.Drawing.Size(900, 660);
             this.Controls.Add(this.islas1);
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "Form2";
             this.Text = "Sucursal";
             this.ResumeLayout(false);

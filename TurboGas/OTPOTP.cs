@@ -38,5 +38,10 @@ namespace TurboGas
 
             //VERIFIACIÓN AQUÍ
         }
+
+        private void ucContraseña_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

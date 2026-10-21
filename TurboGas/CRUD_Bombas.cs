@@ -368,5 +368,22 @@ namespace TurboGas
                 MessageBox.Show("No se encontró contenedor padre.");
             }
         }
+
+        private void btnTanques_Click(object sender, EventArgs e)
+        {
+            Control contenedor = this.Parent; // Funciona con cualquier tipo
+
+            if (contenedor != null)
+            {
+                contenedor.Controls.Clear();
+                CRUD_Tanque CRUDTan = new CRUD_Tanque();
+                CRUDTan.Dock = DockStyle.Fill;
+                contenedor.Controls.Add(CRUDTan);
+            }
+            else
+            {
+                MessageBox.Show("No se encontró contenedor padre.");
+            }
+        }
     }
 }
