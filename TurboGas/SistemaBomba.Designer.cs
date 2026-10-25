@@ -54,6 +54,7 @@
             this.label8 = new System.Windows.Forms.Label();
             this.btnTransacción = new TurboGas.Elementos.Botón();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnCorte = new TurboGas.Elementos.Botón();
             this.btConfiguración = new TurboGas.Elementos.Botón();
             this.btnBack = new TurboGas.Elementos.Botón();
             this.lblBomba = new System.Windows.Forms.Label();
@@ -62,7 +63,6 @@
             this.label9 = new System.Windows.Forms.Label();
             this.ucCRUDTanques = new TurboGas.CRUD_Tanque();
             this.ucCRUDTanque = new TurboGas.CRUD_Tanque();
-            this.btnCorte = new TurboGas.Elementos.Botón();
             this.roundPanel1.SuspendLayout();
             this.roundPanel2.SuspendLayout();
             this.roundPanel3.SuspendLayout();
@@ -380,6 +380,23 @@
             this.panel1.Size = new System.Drawing.Size(900, 74);
             this.panel1.TabIndex = 7;
             // 
+            // btnCorte
+            // 
+            this.btnCorte.BackColor = System.Drawing.Color.White;
+            this.btnCorte.FlatAppearance.BorderSize = 0;
+            this.btnCorte.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(77)))), ((int)(((byte)(0)))));
+            this.btnCorte.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(165)))), ((int)(((byte)(125)))));
+            this.btnCorte.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCorte.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.btnCorte.Image = ((System.Drawing.Image)(resources.GetObject("btnCorte.Image")));
+            this.btnCorte.Location = new System.Drawing.Point(156, 8);
+            this.btnCorte.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnCorte.Name = "btnCorte";
+            this.btnCorte.Size = new System.Drawing.Size(45, 50);
+            this.btnCorte.TabIndex = 4;
+            this.btnCorte.UseVisualStyleBackColor = false;
+            this.btnCorte.Click += new System.EventHandler(this.btnCorte_Click);
+            // 
             // btConfiguración
             // 
             this.btConfiguración.BackColor = System.Drawing.Color.White;
@@ -473,23 +490,6 @@
             this.ucCRUDTanque.Name = "ucCRUDTanque";
             this.ucCRUDTanque.Size = new System.Drawing.Size(900, 656);
             this.ucCRUDTanque.TabIndex = 8;
-            // 
-            // btnCorte
-            // 
-            this.btnCorte.BackColor = System.Drawing.Color.White;
-            this.btnCorte.FlatAppearance.BorderSize = 0;
-            this.btnCorte.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(77)))), ((int)(((byte)(0)))));
-            this.btnCorte.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(165)))), ((int)(((byte)(125)))));
-            this.btnCorte.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCorte.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.btnCorte.Image = ((System.Drawing.Image)(resources.GetObject("btnCorte.Image")));
-            this.btnCorte.Location = new System.Drawing.Point(156, 8);
-            this.btnCorte.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.btnCorte.Name = "btnCorte";
-            this.btnCorte.Size = new System.Drawing.Size(45, 50);
-            this.btnCorte.TabIndex = 4;
-            this.btnCorte.UseVisualStyleBackColor = false;
-            this.btnCorte.Click += new System.EventHandler(this.btnCorte_Click);
             // 
             // SistemaBomba
             // 
