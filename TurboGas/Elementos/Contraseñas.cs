@@ -12,7 +12,8 @@ namespace TurboGas.Elementos
     public class Contraseñas : UserControl
     {
         private TextBox textBox = new TextBox();
-        private PictureBox eyeIcon = new PictureBox();
+        //sam aqui iba tu ojito 
+        private Label eyeIcon = new Label();
 
         private bool mostrarPassword = false;
 
@@ -32,13 +33,15 @@ namespace TurboGas.Elementos
             textBox.Font = new Font("Poppins", 10);
             textBox.UseSystemPasswordChar = true;
 
-            // ICONO OJO
-            eyeIcon.Size = new Size(20, 20);
-            eyeIcon.Dock = DockStyle.Right;
-            eyeIcon.SizeMode = PictureBoxSizeMode.Zoom;
-            eyeIcon.Cursor = Cursors.Hand;
-
-            eyeIcon.Image = Image.FromFile(@"C:\Users\Lesci\Downloads\hidden.png");
+            // aqui ya no va el icono dle ojo xd sino el label que es el que va a tener la palabara del ojo
+            eyeIcon.Size = new Size(55, 20);                     
+            eyeIcon.Dock = DockStyle.Right;                      
+            eyeIcon.TextAlign = ContentAlignment.MiddleCenter;   
+            eyeIcon.Cursor = Cursors.Hand;                       
+            eyeIcon.Font = new Font("Poppins", 8);              
+            eyeIcon.ForeColor = borderColor;                    
+            eyeIcon.Text = "Ver";                                
+          
 
             eyeIcon.Click += TogglePassword;
 
@@ -52,10 +55,10 @@ namespace TurboGas.Elementos
 
             textBox.UseSystemPasswordChar = !mostrarPassword;
 
-            if (mostrarPassword)
-                eyeIcon.Image = Image.FromFile(@"C:\Users\Lesci\Downloads\eye.png");
-            else
-                eyeIcon.Image = Image.FromFile(@"C:\Users\Lesci\Downloads\hidden.png");
+            if (mostrarPassword)         
+                eyeIcon.Text = "ver";
+            else                          
+                eyeIcon.Text = "ocultar";   
         }
 
         public override string Text
