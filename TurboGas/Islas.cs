@@ -66,5 +66,10 @@ namespace TurboGas
         {
             MessageBox.Show("Bomba 3\n=======================\nRegular: \nPremium: \nDíesel\n\nBomba 4\n=======================\nRegular: \nPremium: \nDíesel");
         }
+
+        private void ucSistemaB_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

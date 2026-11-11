@@ -9,12 +9,23 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
 using Mysqlx.Connection;
+using System.Configuration;
 
 namespace TurboGas
 {
     public partial class CRUD_Bombas : UserControl
     {
-        static string bdd = "server=localhost;database=gasolinera2026;port=3306;Uid=root;pwd=SyecMed&c1000";
+        public static class Conexion
+        {
+            public static string Cadena => ConfigurationManager.ConnectionStrings["TurboGasDB"].ConnectionString;
+
+                    public static MySqlConnection Obtener()
+                    {
+                        return new MySqlConnection(Cadena);
+                    }
+        }
+
+        static string bdd = Conexion.Cadena;
 
         public CRUD_Bombas()
         {

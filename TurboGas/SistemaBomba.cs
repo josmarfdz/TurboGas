@@ -10,17 +10,30 @@ using System.Windows.Forms;
 using ClosedXML.Excel;
 using MySql.Data.MySqlClient;
 using System.IO;
+using System.Configuration;
 
 namespace TurboGas
 {
     public partial class SistemaBomba : UserControl
     {
-        static string bdd = "server=localhost;database=gasolinera2026;port=3306;Uid=root;pwd=SyecMed&c1000";
+
+        public static class Conexion
+        {
+            public static string Cadena => ConfigurationManager.ConnectionStrings["TurboGasDB"].ConnectionString;
+
+            public static MySqlConnection Obtener()
+            {
+                return new MySqlConnection(Cadena);
+            }
+        }
+
+        static string bdd = Conexion.Cadena;
+
 
         public SistemaBomba()
         {
             InitializeComponent();
-            ucCRUDTanque.Hide();
+            ucCRUDTanques.Hide();
         }
 
         string Tipo, Método, Correo;
@@ -237,7 +250,7 @@ namespace TurboGas
 
         private void btConfiguración_Click(object sender, EventArgs e)
         {
-            ucCRUDTanque.Show();
+            ucCRUDTanques.Show();
         }
 
         public void TipoRB()

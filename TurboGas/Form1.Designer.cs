@@ -34,18 +34,21 @@
             // login1
             // 
             this.login1.BackColor = System.Drawing.Color.White;
-            this.login1.Location = new System.Drawing.Point(79, 27);
+            this.login1.Location = new System.Drawing.Point(89, 34);
+            this.login1.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.login1.Name = "login1";
-            this.login1.Size = new System.Drawing.Size(800, 500);
+            this.login1.Size = new System.Drawing.Size(900, 625);
             this.login1.TabIndex = 0;
+            this.login1.Load += new System.EventHandler(this.login1_Load);
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(982, 553);
+            this.ClientSize = new System.Drawing.Size(1105, 691);
             this.Controls.Add(this.login1);
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "Form1";
             this.Text = "TurboGas";
             this.ResumeLayout(false);

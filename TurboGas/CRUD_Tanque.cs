@@ -1,5 +1,6 @@
 ﻿using System;
 using System.ComponentModel;
+using System.Configuration;
 using System.Data;
 using System.Drawing;
 using System.Windows.Forms;
@@ -9,7 +10,18 @@ namespace TurboGas
 {
     public partial class CRUD_Tanque : UserControl
     {
-        static string bdd = "server=localhost;database=gasolinera2026;port=3306;Uid=root;pwd=SyecMed&c1000";
+
+        public static class Conexion
+        {
+            public static string Cadena => ConfigurationManager.ConnectionStrings["TurboGasDB"].ConnectionString;
+
+            public static MySqlConnection Obtener()
+            {
+                return new MySqlConnection(Cadena);
+            }
+        }
+
+        static string bdd = Conexion.Cadena;
 
         int? idSel = null;          // null = modo crear, valor = modo editar
         DataTable tiposTabla;       // catálogo de combustibles
