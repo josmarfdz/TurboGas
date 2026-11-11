@@ -15,7 +15,7 @@ namespace TurboGas.Elementos
 
         private int borderSize = 2;
         private int borderRadius = 10;
-        private Color borderColor = ColorTranslator.FromHtml("#FF783B"); //Contorno
+        private Color borderColor = ColorTranslator.FromHtml("#00BCD4"); //Contorno
 
         public textbox()
         {

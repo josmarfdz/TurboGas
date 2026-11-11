@@ -124,6 +124,12 @@
     <Compile Include="CRUD_Tanque.Designer.cs">
       <DependentUpon>CRUD_Tanque.cs</DependentUpon>
     </Compile>
+    <Compile Include="CRUD_todo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CRUD_todo.Designer.cs">
+      <DependentUpon>CRUD_todo.cs</DependentUpon>
+    </Compile>
     <Compile Include="CRUD_Usuarios.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -228,6 +234,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="CRUD_Tanque.resx">
       <DependentUpon>CRUD_Tanque.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CRUD_todo.resx">
+      <DependentUpon>CRUD_todo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CRUD_Usuarios.resx">
       <DependentUpon>CRUD_Usuarios.cs</DependentUpon>

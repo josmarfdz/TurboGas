@@ -20,10 +20,10 @@ namespace TurboGas.Elementos
             this.FlatStyle = FlatStyle.Flat;
             this.FlatAppearance.BorderSize = 0;
             this.Size = new Size(150, 40);
-            this.BackColor = ColorTranslator.FromHtml("#FF783B"); //Fondo
-            this.ForeColor = ColorTranslator.FromHtml("#FFFFFF"); //Letras
-            this.FlatAppearance.MouseOverBackColor = ColorTranslator.FromHtml("#FFA57D"); //Pasar cursor
-            this.FlatAppearance.MouseDownBackColor = ColorTranslator.FromHtml("#FA4D00"); //Dar click
+            this.BackColor = ColorTranslator.FromHtml("#00BCD4"); //Fondo
+            this.ForeColor = ColorTranslator.FromHtml("#263238"); //Letras
+            this.FlatAppearance.MouseOverBackColor = ColorTranslator.FromHtml("#00BCD4"); //Pasar cursor
+            this.FlatAppearance.MouseDownBackColor = ColorTranslator.FromHtml("#00BCD4"); //Dar click
         }
 
         private GraphicsPath GetFigurePath(RectangleF rect, float radius)

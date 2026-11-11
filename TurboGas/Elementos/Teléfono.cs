@@ -16,7 +16,7 @@ namespace TurboGas.Elementos
         private Panel separator = new Panel();
 
         private int borderRadius = 10;
-        private Color borderColor = ColorTranslator.FromHtml("#FF783B");
+        private Color borderColor = ColorTranslator.FromHtml("#00BCD4");
         private int borderSize = 2;
 
         public Teléfono()
