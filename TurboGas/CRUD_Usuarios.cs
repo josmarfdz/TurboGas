@@ -180,5 +180,22 @@ namespace TurboGas
                 MessageBox.Show("No se encontró contenedor padre.");
             }
         }
+
+        private void btnTipos_Click(object sender, EventArgs e)
+        {
+            Control contenedor = this.Parent; // Funciona con cualquier tipo
+
+            if (contenedor != null)
+            {
+                contenedor.Controls.Clear();
+                CRUD_todo CRUDType = new CRUD_todo();
+                CRUDType.Dock = DockStyle.Fill;
+                contenedor.Controls.Add(CRUDType);
+            }
+            else
+            {
+                MessageBox.Show("No se encontró contenedor padre.");
+            }
+        }
     }
 }

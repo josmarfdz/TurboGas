@@ -104,7 +104,7 @@
             // 
             // btnConfirmar
             // 
-            this.btnConfirmar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(120)))), ((int)(((byte)(59)))));
+            this.btnConfirmar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(188)))), ((int)(((byte)(212)))));
             this.btnConfirmar.FlatAppearance.BorderSize = 0;
             this.btnConfirmar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(77)))), ((int)(((byte)(0)))));
             this.btnConfirmar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(165)))), ((int)(((byte)(125)))));
@@ -213,7 +213,7 @@
             // ucCambiarContraseña
             // 
             this.ucCambiarContraseña.BackColor = System.Drawing.Color.White;
-            this.ucCambiarContraseña.Location = new System.Drawing.Point(0, -5);
+            this.ucCambiarContraseña.Location = new System.Drawing.Point(-649, 186);
             this.ucCambiarContraseña.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.ucCambiarContraseña.Name = "ucCambiarContraseña";
             this.ucCambiarContraseña.Size = new System.Drawing.Size(900, 625);

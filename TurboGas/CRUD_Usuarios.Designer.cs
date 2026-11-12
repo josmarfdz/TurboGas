@@ -67,16 +67,16 @@
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(800, 63);
+            this.panel1.Size = new System.Drawing.Size(900, 79);
             this.panel1.TabIndex = 23;
             // 
             // lblNombreUser
             // 
             this.lblNombreUser.AutoSize = true;
             this.lblNombreUser.Font = new System.Drawing.Font("Poppins", 8.25F);
-            this.lblNombreUser.Location = new System.Drawing.Point(603, 20);
+            this.lblNombreUser.Location = new System.Drawing.Point(678, 25);
             this.lblNombreUser.Name = "lblNombreUser";
-            this.lblNombreUser.Size = new System.Drawing.Size(165, 25);
+            this.lblNombreUser.Size = new System.Drawing.Size(202, 30);
             this.lblNombreUser.TabIndex = 10;
             this.lblNombreUser.Text = ":nombre_del_usuario:";
             // 
@@ -86,10 +86,10 @@
             this.btnVendedores.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnVendedores.Font = new System.Drawing.Font("Poppins", 8.25F);
             this.btnVendedores.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnVendedores.Location = new System.Drawing.Point(484, 0);
+            this.btnVendedores.Location = new System.Drawing.Point(544, 0);
             this.btnVendedores.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnVendedores.Name = "btnVendedores";
-            this.btnVendedores.Size = new System.Drawing.Size(114, 65);
+            this.btnVendedores.Size = new System.Drawing.Size(128, 81);
             this.btnVendedores.TabIndex = 5;
             this.btnVendedores.Text = "Vendedores";
             this.btnVendedores.UseVisualStyleBackColor = false;
@@ -100,10 +100,10 @@
             this.btnIslas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnIslas.Font = new System.Drawing.Font("Poppins", 8.25F);
             this.btnIslas.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnIslas.Location = new System.Drawing.Point(369, 0);
+            this.btnIslas.Location = new System.Drawing.Point(415, 0);
             this.btnIslas.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnIslas.Name = "btnIslas";
-            this.btnIslas.Size = new System.Drawing.Size(115, 65);
+            this.btnIslas.Size = new System.Drawing.Size(129, 81);
             this.btnIslas.TabIndex = 4;
             this.btnIslas.Text = "Islas";
             this.btnIslas.UseVisualStyleBackColor = false;
@@ -115,13 +115,14 @@
             this.btnTipos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnTipos.Font = new System.Drawing.Font("Poppins", 8.25F);
             this.btnTipos.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnTipos.Location = new System.Drawing.Point(200, 0);
+            this.btnTipos.Location = new System.Drawing.Point(225, 0);
             this.btnTipos.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnTipos.Name = "btnTipos";
-            this.btnTipos.Size = new System.Drawing.Size(76, 65);
+            this.btnTipos.Size = new System.Drawing.Size(86, 81);
             this.btnTipos.TabIndex = 3;
             this.btnTipos.Text = "Tipos";
             this.btnTipos.UseVisualStyleBackColor = false;
+            this.btnTipos.Click += new System.EventHandler(this.btnTipos_Click);
             // 
             // btnTanques
             // 
@@ -129,10 +130,10 @@
             this.btnTanques.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnTanques.Font = new System.Drawing.Font("Poppins", 8.25F);
             this.btnTanques.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnTanques.Location = new System.Drawing.Point(276, 0);
+            this.btnTanques.Location = new System.Drawing.Point(310, 0);
             this.btnTanques.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnTanques.Name = "btnTanques";
-            this.btnTanques.Size = new System.Drawing.Size(93, 65);
+            this.btnTanques.Size = new System.Drawing.Size(105, 81);
             this.btnTanques.TabIndex = 2;
             this.btnTanques.Text = "Tanques";
             this.btnTanques.UseVisualStyleBackColor = false;
@@ -143,10 +144,10 @@
             this.btnBombas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBombas.Font = new System.Drawing.Font("Poppins", 8.25F);
             this.btnBombas.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnBombas.Location = new System.Drawing.Point(107, 0);
+            this.btnBombas.Location = new System.Drawing.Point(120, 0);
             this.btnBombas.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnBombas.Name = "btnBombas";
-            this.btnBombas.Size = new System.Drawing.Size(93, 65);
+            this.btnBombas.Size = new System.Drawing.Size(105, 81);
             this.btnBombas.TabIndex = 1;
             this.btnBombas.Text = "Bombas";
             this.btnBombas.UseVisualStyleBackColor = false;
@@ -161,7 +162,7 @@
             this.button1.Location = new System.Drawing.Point(0, 0);
             this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(107, 65);
+            this.button1.Size = new System.Drawing.Size(120, 81);
             this.button1.TabIndex = 0;
             this.button1.Text = "Sucursales";
             this.button1.UseVisualStyleBackColor = false;
@@ -169,17 +170,17 @@
             // 
             // btnURol
             // 
-            this.btnURol.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(120)))), ((int)(((byte)(59)))));
+            this.btnURol.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(188)))), ((int)(((byte)(212)))));
             this.btnURol.FlatAppearance.BorderSize = 0;
             this.btnURol.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(250)))), ((int)(((byte)(77)))), ((int)(((byte)(0)))));
             this.btnURol.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(165)))), ((int)(((byte)(125)))));
             this.btnURol.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnURol.Font = new System.Drawing.Font("Poppins", 8.25F);
             this.btnURol.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.btnURol.Location = new System.Drawing.Point(340, 395);
+            this.btnURol.Location = new System.Drawing.Point(382, 494);
             this.btnURol.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnURol.Name = "btnURol";
-            this.btnURol.Size = new System.Drawing.Size(133, 32);
+            this.btnURol.Size = new System.Drawing.Size(150, 40);
             this.btnURol.TabIndex = 24;
             this.btnURol.Text = "Modificar Rol";
             this.btnURol.UseVisualStyleBackColor = false;
@@ -200,19 +201,19 @@
             this.roundPanel1.Controls.Add(this.lblNombre);
             this.roundPanel1.Controls.Add(this.label2);
             this.roundPanel1.Controls.Add(this.label1);
-            this.roundPanel1.Location = new System.Drawing.Point(276, 142);
+            this.roundPanel1.Location = new System.Drawing.Point(310, 178);
             this.roundPanel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.roundPanel1.Name = "roundPanel1";
-            this.roundPanel1.Size = new System.Drawing.Size(351, 234);
+            this.roundPanel1.Size = new System.Drawing.Size(395, 292);
             this.roundPanel1.TabIndex = 25;
             // 
             // lblRol
             // 
             this.lblRol.AutoSize = true;
             this.lblRol.Font = new System.Drawing.Font("Poppins", 8.25F);
-            this.lblRol.Location = new System.Drawing.Point(104, 154);
+            this.lblRol.Location = new System.Drawing.Point(117, 192);
             this.lblRol.Name = "lblRol";
-            this.lblRol.Size = new System.Drawing.Size(81, 25);
+            this.lblRol.Size = new System.Drawing.Size(96, 30);
             this.lblRol.TabIndex = 38;
             this.lblRol.Text = "Rol actual";
             // 
@@ -220,9 +221,9 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Poppins", 8.25F);
-            this.label6.Location = new System.Drawing.Point(18, 154);
+            this.label6.Location = new System.Drawing.Point(20, 192);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(81, 25);
+            this.label6.Size = new System.Drawing.Size(96, 30);
             this.label6.TabIndex = 37;
             this.label6.Text = "Rol actual";
             // 
@@ -230,9 +231,9 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Poppins", 8.25F);
-            this.label5.Location = new System.Drawing.Point(18, 189);
+            this.label5.Location = new System.Drawing.Point(20, 236);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(33, 25);
+            this.label5.Size = new System.Drawing.Size(38, 30);
             this.label5.TabIndex = 36;
             this.label5.Text = "Rol";
             // 
@@ -244,19 +245,19 @@
             "usuario",
             "administrador de programa",
             "administrador de base de datos"});
-            this.comboBox2.Location = new System.Drawing.Point(108, 186);
+            this.comboBox2.Location = new System.Drawing.Point(122, 232);
             this.comboBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(124, 33);
+            this.comboBox2.Size = new System.Drawing.Size(139, 38);
             this.comboBox2.TabIndex = 35;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Poppins", 8.25F);
-            this.label4.Location = new System.Drawing.Point(18, 13);
+            this.label4.Location = new System.Drawing.Point(20, 16);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(84, 25);
+            this.label4.Size = new System.Drawing.Size(101, 30);
             this.label4.TabIndex = 34;
             this.label4.Text = "N° de User";
             // 
@@ -264,19 +265,19 @@
             // 
             this.comboBox1.Font = new System.Drawing.Font("Poppins", 8.25F);
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(108, 10);
+            this.comboBox1.Location = new System.Drawing.Point(122, 12);
             this.comboBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(124, 33);
+            this.comboBox1.Size = new System.Drawing.Size(139, 38);
             this.comboBox1.TabIndex = 26;
             // 
             // lblTel
             // 
             this.lblTel.AutoSize = true;
             this.lblTel.Font = new System.Drawing.Font("Poppins", 8.25F);
-            this.lblTel.Location = new System.Drawing.Point(104, 121);
+            this.lblTel.Location = new System.Drawing.Point(117, 151);
             this.lblTel.Name = "lblTel";
-            this.lblTel.Size = new System.Drawing.Size(73, 25);
+            this.lblTel.Size = new System.Drawing.Size(87, 30);
             this.lblTel.TabIndex = 33;
             this.lblTel.Text = "Telefono";
             // 
@@ -284,9 +285,9 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Poppins", 8.25F);
-            this.label3.Location = new System.Drawing.Point(13, 121);
+            this.label3.Location = new System.Drawing.Point(15, 151);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(73, 25);
+            this.label3.Size = new System.Drawing.Size(87, 30);
             this.label3.TabIndex = 32;
             this.label3.Text = "Telefono";
             // 
@@ -294,9 +295,9 @@
             // 
             this.lblCorreo.AutoSize = true;
             this.lblCorreo.Font = new System.Drawing.Font("Poppins", 8.25F);
-            this.lblCorreo.Location = new System.Drawing.Point(104, 83);
+            this.lblCorreo.Location = new System.Drawing.Point(117, 104);
             this.lblCorreo.Name = "lblCorreo";
-            this.lblCorreo.Size = new System.Drawing.Size(60, 25);
+            this.lblCorreo.Size = new System.Drawing.Size(71, 30);
             this.lblCorreo.TabIndex = 31;
             this.lblCorreo.Text = "Correo";
             // 
@@ -304,9 +305,9 @@
             // 
             this.lblNombre.AutoSize = true;
             this.lblNombre.Font = new System.Drawing.Font("Poppins", 8.25F);
-            this.lblNombre.Location = new System.Drawing.Point(104, 43);
+            this.lblNombre.Location = new System.Drawing.Point(117, 54);
             this.lblNombre.Name = "lblNombre";
-            this.lblNombre.Size = new System.Drawing.Size(68, 25);
+            this.lblNombre.Size = new System.Drawing.Size(82, 30);
             this.lblNombre.TabIndex = 30;
             this.lblNombre.Text = "Nombre";
             // 
@@ -314,9 +315,9 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Poppins", 8.25F);
-            this.label2.Location = new System.Drawing.Point(13, 83);
+            this.label2.Location = new System.Drawing.Point(15, 104);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(60, 25);
+            this.label2.Size = new System.Drawing.Size(71, 30);
             this.label2.TabIndex = 29;
             this.label2.Text = "Correo";
             // 
@@ -324,21 +325,22 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Poppins", 8.25F);
-            this.label1.Location = new System.Drawing.Point(13, 43);
+            this.label1.Location = new System.Drawing.Point(15, 54);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(68, 25);
+            this.label1.Size = new System.Drawing.Size(82, 30);
             this.label1.TabIndex = 27;
             this.label1.Text = "Nombre";
             // 
             // CRUD_Usuarios
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.roundPanel1);
             this.Controls.Add(this.btnURol);
             this.Controls.Add(this.panel1);
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "CRUD_Usuarios";
-            this.Size = new System.Drawing.Size(800, 500);
+            this.Size = new System.Drawing.Size(900, 625);
             this.Load += new System.EventHandler(this.CRUD_Usuarios_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
