@@ -42,9 +42,10 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(61, 116);
+            this.pictureBox1.Location = new System.Drawing.Point(69, 145);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(250, 250);
+            this.pictureBox1.Size = new System.Drawing.Size(281, 312);
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
@@ -52,9 +53,9 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Poppins", 10F);
-            this.label1.Location = new System.Drawing.Point(354, 152);
+            this.label1.Location = new System.Drawing.Point(398, 190);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(86, 30);
+            this.label1.Size = new System.Drawing.Size(100, 36);
             this.label1.TabIndex = 1;
             this.label1.Text = "Nombre:";
             // 
@@ -62,9 +63,9 @@
             // 
             this.lblNombre.AutoSize = true;
             this.lblNombre.Font = new System.Drawing.Font("Poppins", 10F);
-            this.lblNombre.Location = new System.Drawing.Point(446, 152);
+            this.lblNombre.Location = new System.Drawing.Point(502, 190);
             this.lblNombre.Name = "lblNombre";
-            this.lblNombre.Size = new System.Drawing.Size(101, 30);
+            this.lblNombre.Size = new System.Drawing.Size(120, 36);
             this.lblNombre.TabIndex = 2;
             this.lblNombre.Text = "lblNombre";
             // 
@@ -72,9 +73,9 @@
             // 
             this.lblTeléfono.AutoSize = true;
             this.lblTeléfono.Font = new System.Drawing.Font("Poppins", 10F);
-            this.lblTeléfono.Location = new System.Drawing.Point(451, 199);
+            this.lblTeléfono.Location = new System.Drawing.Point(507, 249);
             this.lblTeléfono.Name = "lblTeléfono";
-            this.lblTeléfono.Size = new System.Drawing.Size(106, 30);
+            this.lblTeléfono.Size = new System.Drawing.Size(125, 36);
             this.lblTeléfono.TabIndex = 4;
             this.lblTeléfono.Text = "lblTeléfono";
             // 
@@ -82,9 +83,9 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Poppins", 10F);
-            this.label3.Location = new System.Drawing.Point(354, 199);
+            this.label3.Location = new System.Drawing.Point(398, 249);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(91, 30);
+            this.label3.Size = new System.Drawing.Size(105, 36);
             this.label3.TabIndex = 3;
             this.label3.Text = "Teléfono:";
             // 
@@ -92,9 +93,9 @@
             // 
             this.lblCorreo.AutoSize = true;
             this.lblCorreo.Font = new System.Drawing.Font("Poppins", 10F);
-            this.lblCorreo.Location = new System.Drawing.Point(451, 247);
+            this.lblCorreo.Location = new System.Drawing.Point(507, 309);
             this.lblCorreo.Name = "lblCorreo";
-            this.lblCorreo.Size = new System.Drawing.Size(90, 30);
+            this.lblCorreo.Size = new System.Drawing.Size(106, 36);
             this.lblCorreo.TabIndex = 6;
             this.lblCorreo.Text = "lblCorreo";
             // 
@@ -102,9 +103,9 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Poppins", 10F);
-            this.label5.Location = new System.Drawing.Point(354, 247);
+            this.label5.Location = new System.Drawing.Point(398, 309);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(75, 30);
+            this.label5.Size = new System.Drawing.Size(86, 36);
             this.label5.TabIndex = 5;
             this.label5.Text = "Correo:";
             // 
@@ -117,9 +118,10 @@
             this.botón1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.botón1.Font = new System.Drawing.Font("Poppins Medium", 8F);
             this.botón1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.botón1.Location = new System.Drawing.Point(353, 313);
+            this.botón1.Location = new System.Drawing.Point(404, 389);
+            this.botón1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.botón1.Name = "botón1";
-            this.botón1.Size = new System.Drawing.Size(188, 40);
+            this.botón1.Size = new System.Drawing.Size(212, 50);
             this.botón1.TabIndex = 7;
             this.botón1.Text = "Cambiar información";
             this.botón1.UseVisualStyleBackColor = false;
@@ -134,9 +136,10 @@
             this.btnBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBack.Font = new System.Drawing.Font("Poppins SemiBold", 10F);
             this.btnBack.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.btnBack.Location = new System.Drawing.Point(61, 51);
+            this.btnBack.Location = new System.Drawing.Point(69, 64);
+            this.btnBack.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnBack.Name = "btnBack";
-            this.btnBack.Size = new System.Drawing.Size(43, 40);
+            this.btnBack.Size = new System.Drawing.Size(48, 50);
             this.btnBack.TabIndex = 14;
             this.btnBack.Text = "<";
             this.btnBack.UseVisualStyleBackColor = false;
@@ -144,7 +147,7 @@
             // 
             // Perfilcs
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.Controls.Add(this.btnBack);
@@ -156,8 +159,9 @@
             this.Controls.Add(this.lblNombre);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox1);
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "Perfilcs";
-            this.Size = new System.Drawing.Size(800, 500);
+            this.Size = new System.Drawing.Size(900, 625);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

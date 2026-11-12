@@ -88,6 +88,13 @@
             this.btnIslas = new System.Windows.Forms.Button();
             this.btnSucursales = new System.Windows.Forms.Button();
             this.rndForm = new TurboGas.Elementos.RoundPanel();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.cmbTipo = new System.Windows.Forms.ComboBox();
             this.txtNombre = new TurboGas.Elementos.textbox();
             this.txtCapacidad = new TurboGas.Elementos.textbox();
@@ -96,7 +103,6 @@
             this.txtLitros = new TurboGas.Elementos.textbox();
             this.cmbEstado = new System.Windows.Forms.ComboBox();
             this.btnGuardar = new TurboGas.Elementos.Botón();
-            this.btnNuevo = new TurboGas.Elementos.Botón();
             this.btnAbastecer = new TurboGas.Elementos.Botón();
             this.btnEliminar = new TurboGas.Elementos.Botón();
             this.lblSuc = new System.Windows.Forms.Label();
@@ -104,13 +110,6 @@
             this.dgvTanques = new System.Windows.Forms.DataGridView();
             this.pbNivel = new System.Windows.Forms.ProgressBar();
             this.lblNivel = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.rndForm.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTanques)).BeginInit();
@@ -127,7 +126,6 @@
             this.panel1.Controls.Add(this.btnTipos);
             this.panel1.Controls.Add(this.btnIslas);
             this.panel1.Controls.Add(this.btnSucursales);
-            this.panel1.Controls.Add(this.btnNuevo);
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(900, 81);
@@ -147,7 +145,6 @@
             this.btnBack.Text = "<";
             this.btnBack.UseVisualStyleBackColor = false;
             this.btnBack.Visible = false;
-            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
             // lblNombreUser
             // 
@@ -230,6 +227,70 @@
             this.rndForm.Size = new System.Drawing.Size(400, 500);
             this.rndForm.TabIndex = 1;
             // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(20, 366);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(156, 20);
+            this.label7.TabIndex = 17;
+            this.label7.Text = "LITROS ACTUALES";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(19, 284);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(154, 20);
+            this.label6.TabIndex = 16;
+            this.label6.Text = "Cantidad maxima (L)";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(19, 236);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(154, 20);
+            this.label5.TabIndex = 15;
+            this.label5.Text = "Cantidad maxima (L)";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(19, 181);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(150, 20);
+            this.label4.TabIndex = 14;
+            this.label4.Text = "Cantidad minima (L)";
+            this.label4.Click += new System.EventHandler(this.label4_Click);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(19, 125);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(108, 20);
+            this.label3.TabIndex = 13;
+            this.label3.Text = "Capacidad (L)";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(19, 69);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(156, 20);
+            this.label2.TabIndex = 12;
+            this.label2.Text = "Nombre de la bomba";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(19, 22);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(150, 20);
+            this.label1.TabIndex = 11;
+            this.label1.Text = "Tipo de combustible";
+            // 
             // cmbTipo
             // 
             this.cmbTipo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
@@ -309,19 +370,6 @@
             this.btnGuardar.Text = "Crear";
             this.btnGuardar.UseVisualStyleBackColor = false;
             this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
-            // 
-            // btnNuevo
-            // 
-            this.btnNuevo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(120)))), ((int)(((byte)(59)))));
-            this.btnNuevo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnNuevo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.btnNuevo.Location = new System.Drawing.Point(304, 38);
-            this.btnNuevo.Name = "btnNuevo";
-            this.btnNuevo.Size = new System.Drawing.Size(150, 40);
-            this.btnNuevo.TabIndex = 8;
-            this.btnNuevo.Text = "Borrar";
-            this.btnNuevo.UseVisualStyleBackColor = false;
-            this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
             // 
             // btnAbastecer
             // 
@@ -403,70 +451,6 @@
             this.lblNivel.TabIndex = 0;
             this.lblNivel.Text = "Selecciona un tanque para ver su nivel";
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(19, 22);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(150, 20);
-            this.label1.TabIndex = 11;
-            this.label1.Text = "Tipo de combustible";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(19, 69);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(156, 20);
-            this.label2.TabIndex = 12;
-            this.label2.Text = "Nombre de la bomba";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(19, 125);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(108, 20);
-            this.label3.TabIndex = 13;
-            this.label3.Text = "Capacidad (L)";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(19, 181);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(150, 20);
-            this.label4.TabIndex = 14;
-            this.label4.Text = "Cantidad minima (L)";
-            this.label4.Click += new System.EventHandler(this.label4_Click);
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(19, 236);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(154, 20);
-            this.label5.TabIndex = 15;
-            this.label5.Text = "Cantidad maxima (L)";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(19, 284);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(154, 20);
-            this.label6.TabIndex = 16;
-            this.label6.Text = "Cantidad maxima (L)";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(20, 366);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(156, 20);
-            this.label7.TabIndex = 17;
-            this.label7.Text = "LITROS ACTUALES";
-            // 
             // CRUD_Tanque
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -513,7 +497,6 @@
         private Elementos.textbox txtLitros;
         private System.Windows.Forms.ComboBox cmbEstado;
         private Elementos.Botón btnGuardar;
-        private Elementos.Botón btnNuevo;
         private Elementos.Botón btnAbastecer;
         private Elementos.Botón btnEliminar;
         private System.Windows.Forms.Label lblSuc;
