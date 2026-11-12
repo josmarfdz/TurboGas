@@ -47,6 +47,8 @@ namespace TurboGas
                     cmbAct.DataSource = dataTable;
                     cmbAct.DisplayMember = "id_type";
                     cmbAct.ValueMember = "id_type";
+                    cmbDel.DisplayMember = "id_type";
+                    cmbDel.ValueMember = "id_type";
                 }
             }
             catch(Exception ex)
@@ -61,12 +63,26 @@ namespace TurboGas
             string clave = txtClave.Text;
             string desc = txtDesc.Text;
 
-            InsertarNuevosTipos(name, clave, desc);
+            if (!decimal.TryParse(txtPrecio.Text, out decimal precio))
+            {
+                MessageBox.Show("Ingresa un precio válido.");
+                return;
+            }
+
+            if (precio <= 0)
+            {
+                MessageBox.Show("El precio debe ser mayor a 0.");
+                return;
+            }
+
+            InsertarNuevosTipos(name, clave, desc, precio);
+
+            LlenarComboBox();
         }
 
-        public static void InsertarNuevosTipos(string nombre, string clave, string desc)
+        public static void InsertarNuevosTipos(string nombre, string clave, string desc, decimal precio)
         {
-            string query = "INSERT INTO tipos_combustible(nombre, clave, descripcion) VALUES(@nombre, @clave, @desc)";
+            string query = "INSERT INTO tipos_combustible(nombre, clave, descripcion, precio) VALUES(@nombre, @clave, @desc, @precio)";
             try
             {
                 using (MySqlConnection cnc = new MySqlConnection(bdd))
@@ -76,6 +92,7 @@ namespace TurboGas
                     cmd.Parameters.AddWithValue("@nombre", nombre);
                     cmd.Parameters.AddWithValue("@clave", clave);
                     cmd.Parameters.AddWithValue("@desc", desc);
+                    cmd.Parameters.AddWithValue("@precio", precio);
 
                     cmd.ExecuteNonQuery();
                 }
@@ -92,12 +109,23 @@ namespace TurboGas
             string name = txtActName.Text;
             string clave = txtActClave.Text;
             string desc = txtActDesc.Text;
-            ActualizarTipo(name, clave, desc);
+            if (!decimal.TryParse(txtPrecio.Text, out decimal precio))
+            {
+                MessageBox.Show("Ingresa un precio válido.");
+                return;
+            }
+
+            if (precio <= 0)
+            {
+                MessageBox.Show("El precio debe ser mayor a 0.");
+                return;
+            }
+            ActualizarTipo(name, clave, desc, precio);
         }
 
-        public void ActualizarTipo(string name, string clave, string desc)
+        public void ActualizarTipo(string name, string clave, string desc, decimal precio)
         {
-            string query = "UPDATE tipos_combustible SET nombre = @name, clave = @clave, descripcion = @desc WHERE id_type = @Id_type";
+            string query = "UPDATE tipos_combustible SET nombre = @name, clave = @clave, descripcion = @desc, precio = @precio WHERE id_type = @Id_type";
             try
             {
                 using (MySqlConnection cnc = new MySqlConnection(bdd))
@@ -107,6 +135,8 @@ namespace TurboGas
                     cmd.Parameters.AddWithValue("@name", name);
                     cmd.Parameters.AddWithValue("@clave", clave);
                     cmd.Parameters.AddWithValue("@desc", desc);
+                    cmd.Parameters.AddWithValue("@precio", precio);
+
 
                     cmd.Parameters.AddWithValue("@Id_type", cmbAct.SelectedValue);
 
@@ -122,7 +152,38 @@ namespace TurboGas
 
         private void btnDel_Click(object sender, EventArgs e)
         {
+            if(cmbAct.SelectedValue == null)
+            {
+                MessageBox.Show("Selecciona un tipo");
+                return;
+            }
 
+            var confirm = MessageBox.Show("Seguro que quieres borrar este tipo de combustible?", "Confirmar", MessageBoxButtons.YesNo);
+
+            if(confirm == DialogResult.Yes)
+            {
+                BorrarTipo();
+            }
+        }
+
+        private void BorrarTipo()
+        {
+            string query = "DELETE FROM tipos_combustible WHERE id_type = @id_tipo";
+            try
+            {
+                using (MySqlConnection cnc = new MySqlConnection(bdd))
+                {
+                    cnc.Open();
+                    MySqlCommand cmd = new MySqlCommand( query, cnc);
+                    cmd.Parameters.AddWithValue("@id_tipo", cmbAct.SelectedValue);
+                    cmd.ExecuteNonQuery();
+                    MessageBox.Show("Tipo eliminada correctamente", "Tipo eliminada correctamente");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private void button1_Click(object sender, EventArgs e)
