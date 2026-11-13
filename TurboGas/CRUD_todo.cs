@@ -188,32 +188,98 @@ namespace TurboGas
 
         private void button1_Click(object sender, EventArgs e)
         {
+            Control contenedor = this.Parent; // Funciona con cualquier tipo
 
+            if (contenedor != null)
+            {
+                contenedor.Controls.Clear();
+                CRUD_Sucursales CRUDSuc = new CRUD_Sucursales();
+                CRUDSuc.Dock = DockStyle.Fill;
+                contenedor.Controls.Add(CRUDSuc);
+            }
+            else
+            {
+                MessageBox.Show("No se encontró contenedor padre.");
+            }
         }
 
         private void btnIslas_Click(object sender, EventArgs e)
         {
+            Control contenedor = this.Parent; // Funciona con cualquier tipo
 
+            if (contenedor != null)
+            {
+                contenedor.Controls.Clear();
+                CRUD_Islas CRUDIsl = new CRUD_Islas();
+                CRUDIsl.Dock = DockStyle.Fill;
+                contenedor.Controls.Add(CRUDIsl);
+            }
+            else
+            {
+                MessageBox.Show("No se encontró contenedor padre.");
+            }
         }
 
         private void btnTipos_Click(object sender, EventArgs e)
         {
+            Control contenedor = this.Parent; // Funciona con cualquier tipo
 
+            if (contenedor != null)
+            {
+                contenedor.Controls.Clear();
+                CRUD_Bombas CRUDBomb = new CRUD_Bombas();
+                CRUDBomb.Dock = DockStyle.Fill;
+                contenedor.Controls.Add(CRUDBomb);
+            }
+            else
+            {
+                MessageBox.Show("No se encontró contenedor padre.");
+            }
         }
 
         private void btnTanques_Click(object sender, EventArgs e)
         {
+            Control contenedor = this.Parent; // Funciona con cualquier tipo
 
+            if (contenedor != null)
+            {
+                contenedor.Controls.Clear();
+                CRUD_Tanque CRUDTanq = new CRUD_Tanque();
+                CRUDTanq.Dock = DockStyle.Fill;
+                contenedor.Controls.Add(CRUDTanq);
+            }
+            else
+            {
+                MessageBox.Show("No se encontró contenedor padre.");
+            }
         }
 
         private void btnUsers_Click(object sender, EventArgs e)
         {
+            Control contenedor = this.Parent; // Funciona con cualquier tipo
 
+            if (contenedor != null)
+            {
+                contenedor.Controls.Clear();
+                CRUD_Usuarios CRUDUser = new CRUD_Usuarios();
+                CRUDUser.Dock = DockStyle.Fill;
+                contenedor.Controls.Add(CRUDUser);
+            }
+            else
+            {
+                MessageBox.Show("No se encontró contenedor padre.");
+            }
         }
 
         private void btnVendedores_Click(object sender, EventArgs e)
         {
+            
+        }
 
+
+        private void CRUD_todo_Load_1(object sender, EventArgs e)
+        {
+            lblNombreUser.Text = Sesion.UserNombre;
         }
     }
 }

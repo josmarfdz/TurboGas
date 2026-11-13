@@ -32,7 +32,7 @@
             this.lblNombreUser = new System.Windows.Forms.Label();
             this.btnVendedores = new System.Windows.Forms.Button();
             this.btnUsers = new System.Windows.Forms.Button();
-            this.btnTipos = new System.Windows.Forms.Button();
+            this.btnBombas = new System.Windows.Forms.Button();
             this.btnTanques = new System.Windows.Forms.Button();
             this.btnIslas = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
@@ -44,6 +44,8 @@
             this.btnDel = new TurboGas.Elementos.Botón();
             this.label8 = new System.Windows.Forms.Label();
             this.roundPanel1 = new TurboGas.Elementos.RoundPanel();
+            this.label10 = new System.Windows.Forms.Label();
+            this.txtActPrecio = new TurboGas.Elementos.textbox();
             this.cmbAct = new System.Windows.Forms.ComboBox();
             this.label7 = new System.Windows.Forms.Label();
             this.txtActDesc = new TurboGas.Elementos.textbox();
@@ -54,6 +56,8 @@
             this.txtActClave = new TurboGas.Elementos.textbox();
             this.label6 = new System.Windows.Forms.Label();
             this.rndCreate = new TurboGas.Elementos.RoundPanel();
+            this.txtPrecio = new TurboGas.Elementos.textbox();
+            this.label9 = new System.Windows.Forms.Label();
             this.txtDesc = new TurboGas.Elementos.textbox();
             this.label3 = new System.Windows.Forms.Label();
             this.txtName = new TurboGas.Elementos.textbox();
@@ -61,10 +65,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.txtClave = new TurboGas.Elementos.textbox();
             this.label2 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.txtPrecio = new TurboGas.Elementos.textbox();
-            this.txtActPrecio = new TurboGas.Elementos.textbox();
-            this.label10 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.roundPanel2.SuspendLayout();
             this.roundPanel1.SuspendLayout();
@@ -77,7 +77,7 @@
             this.panel1.Controls.Add(this.lblNombreUser);
             this.panel1.Controls.Add(this.btnVendedores);
             this.panel1.Controls.Add(this.btnUsers);
-            this.panel1.Controls.Add(this.btnTipos);
+            this.panel1.Controls.Add(this.btnBombas);
             this.panel1.Controls.Add(this.btnTanques);
             this.panel1.Controls.Add(this.btnIslas);
             this.panel1.Controls.Add(this.button1);
@@ -127,20 +127,20 @@
             this.btnUsers.UseVisualStyleBackColor = false;
             this.btnUsers.Click += new System.EventHandler(this.btnUsers_Click);
             // 
-            // btnTipos
+            // btnBombas
             // 
-            this.btnTipos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(188)))), ((int)(((byte)(212)))));
-            this.btnTipos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnTipos.Font = new System.Drawing.Font("Poppins", 8.25F);
-            this.btnTipos.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btnTipos.Location = new System.Drawing.Point(225, 0);
-            this.btnTipos.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnTipos.Name = "btnTipos";
-            this.btnTipos.Size = new System.Drawing.Size(86, 81);
-            this.btnTipos.TabIndex = 3;
-            this.btnTipos.Text = "Tipos";
-            this.btnTipos.UseVisualStyleBackColor = false;
-            this.btnTipos.Click += new System.EventHandler(this.btnTipos_Click);
+            this.btnBombas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(188)))), ((int)(((byte)(212)))));
+            this.btnBombas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBombas.Font = new System.Drawing.Font("Poppins", 7F);
+            this.btnBombas.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btnBombas.Location = new System.Drawing.Point(225, 0);
+            this.btnBombas.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnBombas.Name = "btnBombas";
+            this.btnBombas.Size = new System.Drawing.Size(86, 81);
+            this.btnBombas.TabIndex = 3;
+            this.btnBombas.Text = "Bombas";
+            this.btnBombas.UseVisualStyleBackColor = false;
+            this.btnBombas.Click += new System.EventHandler(this.btnTipos_Click);
             // 
             // btnTanques
             // 
@@ -290,6 +290,26 @@
             this.roundPanel1.Size = new System.Drawing.Size(431, 312);
             this.roundPanel1.TabIndex = 26;
             // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Poppins", 8.25F);
+            this.label10.Location = new System.Drawing.Point(14, 219);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(65, 30);
+            this.label10.TabIndex = 9;
+            this.label10.Text = "Precio";
+            // 
+            // txtActPrecio
+            // 
+            this.txtActPrecio.BackColor = System.Drawing.Color.White;
+            this.txtActPrecio.Location = new System.Drawing.Point(228, 206);
+            this.txtActPrecio.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtActPrecio.Name = "txtActPrecio";
+            this.txtActPrecio.Padding = new System.Windows.Forms.Padding(10);
+            this.txtActPrecio.Size = new System.Drawing.Size(200, 49);
+            this.txtActPrecio.TabIndex = 8;
+            // 
             // cmbAct
             // 
             this.cmbAct.FormattingEnabled = true;
@@ -403,6 +423,26 @@
             this.rndCreate.Size = new System.Drawing.Size(431, 312);
             this.rndCreate.TabIndex = 25;
             // 
+            // txtPrecio
+            // 
+            this.txtPrecio.BackColor = System.Drawing.Color.White;
+            this.txtPrecio.Location = new System.Drawing.Point(222, 181);
+            this.txtPrecio.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtPrecio.Name = "txtPrecio";
+            this.txtPrecio.Padding = new System.Windows.Forms.Padding(10);
+            this.txtPrecio.Size = new System.Drawing.Size(200, 49);
+            this.txtPrecio.TabIndex = 9;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Poppins", 8.25F);
+            this.label9.Location = new System.Drawing.Point(8, 200);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(65, 30);
+            this.label9.TabIndex = 8;
+            this.label9.Text = "Precio";
+            // 
             // txtDesc
             // 
             this.txtDesc.BackColor = System.Drawing.Color.White;
@@ -480,46 +520,6 @@
             this.label2.TabIndex = 4;
             this.label2.Text = "Clave";
             // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Poppins", 8.25F);
-            this.label9.Location = new System.Drawing.Point(8, 200);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(65, 30);
-            this.label9.TabIndex = 8;
-            this.label9.Text = "Precio";
-            // 
-            // txtPrecio
-            // 
-            this.txtPrecio.BackColor = System.Drawing.Color.White;
-            this.txtPrecio.Location = new System.Drawing.Point(222, 181);
-            this.txtPrecio.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtPrecio.Name = "txtPrecio";
-            this.txtPrecio.Padding = new System.Windows.Forms.Padding(10);
-            this.txtPrecio.Size = new System.Drawing.Size(200, 49);
-            this.txtPrecio.TabIndex = 9;
-            // 
-            // txtActPrecio
-            // 
-            this.txtActPrecio.BackColor = System.Drawing.Color.White;
-            this.txtActPrecio.Location = new System.Drawing.Point(228, 206);
-            this.txtActPrecio.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtActPrecio.Name = "txtActPrecio";
-            this.txtActPrecio.Padding = new System.Windows.Forms.Padding(10);
-            this.txtActPrecio.Size = new System.Drawing.Size(200, 49);
-            this.txtActPrecio.TabIndex = 8;
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Poppins", 8.25F);
-            this.label10.Location = new System.Drawing.Point(14, 219);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(65, 30);
-            this.label10.TabIndex = 9;
-            this.label10.Text = "Precio";
-            // 
             // CRUD_todo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -534,6 +534,7 @@
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "CRUD_todo";
             this.Size = new System.Drawing.Size(904, 635);
+            this.Load += new System.EventHandler(this.CRUD_todo_Load_1);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.roundPanel2.ResumeLayout(false);
@@ -553,7 +554,7 @@
         private System.Windows.Forms.Label lblNombreUser;
         private System.Windows.Forms.Button btnVendedores;
         private System.Windows.Forms.Button btnUsers;
-        private System.Windows.Forms.Button btnTipos;
+        private System.Windows.Forms.Button btnBombas;
         private System.Windows.Forms.Button btnTanques;
         private System.Windows.Forms.Button btnIslas;
         private System.Windows.Forms.Button button1;
