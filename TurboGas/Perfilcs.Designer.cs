@@ -37,6 +37,8 @@
             this.label5 = new System.Windows.Forms.Label();
             this.botón1 = new TurboGas.Elementos.Botón();
             this.btnBack = new TurboGas.Elementos.Botón();
+            this.label2 = new System.Windows.Forms.Label();
+            this.lblId = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -63,7 +65,7 @@
             // 
             this.lblNombre.AutoSize = true;
             this.lblNombre.Font = new System.Drawing.Font("Poppins", 10F);
-            this.lblNombre.Location = new System.Drawing.Point(502, 190);
+            this.lblNombre.Location = new System.Drawing.Point(551, 190);
             this.lblNombre.Name = "lblNombre";
             this.lblNombre.Size = new System.Drawing.Size(120, 36);
             this.lblNombre.TabIndex = 2;
@@ -73,7 +75,7 @@
             // 
             this.lblTeléfono.AutoSize = true;
             this.lblTeléfono.Font = new System.Drawing.Font("Poppins", 10F);
-            this.lblTeléfono.Location = new System.Drawing.Point(507, 249);
+            this.lblTeléfono.Location = new System.Drawing.Point(556, 249);
             this.lblTeléfono.Name = "lblTeléfono";
             this.lblTeléfono.Size = new System.Drawing.Size(125, 36);
             this.lblTeléfono.TabIndex = 4;
@@ -93,7 +95,7 @@
             // 
             this.lblCorreo.AutoSize = true;
             this.lblCorreo.Font = new System.Drawing.Font("Poppins", 10F);
-            this.lblCorreo.Location = new System.Drawing.Point(507, 309);
+            this.lblCorreo.Location = new System.Drawing.Point(556, 309);
             this.lblCorreo.Name = "lblCorreo";
             this.lblCorreo.Size = new System.Drawing.Size(106, 36);
             this.lblCorreo.TabIndex = 6;
@@ -145,11 +147,33 @@
             this.btnBack.UseVisualStyleBackColor = false;
             this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Poppins", 10F);
+            this.label2.Location = new System.Drawing.Point(398, 135);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(147, 36);
+            this.label2.TabIndex = 15;
+            this.label2.Text = "Identificador:";
+            // 
+            // lblId
+            // 
+            this.lblId.AutoSize = true;
+            this.lblId.Font = new System.Drawing.Font("Poppins", 10F);
+            this.lblId.Location = new System.Drawing.Point(551, 135);
+            this.lblId.Name = "lblId";
+            this.lblId.Size = new System.Drawing.Size(58, 36);
+            this.lblId.TabIndex = 16;
+            this.lblId.Text = "lblId";
+            // 
             // Perfilcs
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
+            this.Controls.Add(this.lblId);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.botón1);
             this.Controls.Add(this.lblCorreo);
@@ -162,6 +186,7 @@
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "Perfilcs";
             this.Size = new System.Drawing.Size(900, 625);
+            this.Load += new System.EventHandler(this.Perfilcs_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -179,5 +204,7 @@
         private System.Windows.Forms.Label label5;
         private Elementos.Botón botón1;
         private Elementos.Botón btnBack;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lblId;
     }
 }
