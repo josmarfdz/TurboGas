@@ -19,7 +19,7 @@ namespace TurboGas
 
         public static class Conexion
         {
-            public static string Cadena => ConfigurationManager.ConnectionStrings["TurboGasDB"].ConnectionString;
+            public static string Cadena => ConfigurationManager.ConnectionStrings["TurboGasDB"]?.ConnectionString ?? string.Empty;
 
             public static MySqlConnection Obtener()
             {
@@ -27,7 +27,7 @@ namespace TurboGas
             }
         }
 
-        static string bdd = Conexion.Cadena;
+        static string bdd => Conexion.Cadena;
 
 
         public SistemaBomba()
@@ -130,6 +130,7 @@ namespace TurboGas
                 string query = @"SELECT folio, combustible, litros, precio, importe, 
                                         metodo_pago, fecha_venta 
                                  FROM venta 
+                                 WHERE DATE(fecha_venta) = CURDATE()
                                  ORDER BY fecha_venta DESC";
 
                 using (MySqlConnection con = new MySqlConnection(bdd))
