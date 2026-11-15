@@ -84,7 +84,7 @@
             this.txtBoxRegName.Location = new System.Drawing.Point(126, 14);
             this.txtBoxRegName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtBoxRegName.Name = "txtBoxRegName";
-            this.txtBoxRegName.Padding = new System.Windows.Forms.Padding(10, 10, 10, 10);
+            this.txtBoxRegName.Padding = new System.Windows.Forms.Padding(10);
             this.txtBoxRegName.Size = new System.Drawing.Size(150, 42);
             this.txtBoxRegName.TabIndex = 0;
             // 
@@ -131,7 +131,7 @@
             this.txtRegDomicilio.Location = new System.Drawing.Point(126, 86);
             this.txtRegDomicilio.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtRegDomicilio.Name = "txtRegDomicilio";
-            this.txtRegDomicilio.Padding = new System.Windows.Forms.Padding(10, 10, 10, 10);
+            this.txtRegDomicilio.Padding = new System.Windows.Forms.Padding(10);
             this.txtRegDomicilio.Size = new System.Drawing.Size(150, 42);
             this.txtRegDomicilio.TabIndex = 3;
             // 
@@ -151,7 +151,7 @@
             this.txtRegCiudad.Location = new System.Drawing.Point(126, 162);
             this.txtRegCiudad.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtRegCiudad.Name = "txtRegCiudad";
-            this.txtRegCiudad.Padding = new System.Windows.Forms.Padding(10, 10, 10, 10);
+            this.txtRegCiudad.Padding = new System.Windows.Forms.Padding(10);
             this.txtRegCiudad.Size = new System.Drawing.Size(150, 42);
             this.txtRegCiudad.TabIndex = 5;
             // 
@@ -171,7 +171,7 @@
             this.txtRegEstado.Location = new System.Drawing.Point(126, 238);
             this.txtRegEstado.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtRegEstado.Name = "txtRegEstado";
-            this.txtRegEstado.Padding = new System.Windows.Forms.Padding(10, 10, 10, 10);
+            this.txtRegEstado.Padding = new System.Windows.Forms.Padding(10);
             this.txtRegEstado.Size = new System.Drawing.Size(150, 42);
             this.txtRegEstado.TabIndex = 7;
             // 
@@ -191,7 +191,7 @@
             this.txtRegCp.Location = new System.Drawing.Point(126, 310);
             this.txtRegCp.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtRegCp.Name = "txtRegCp";
-            this.txtRegCp.Padding = new System.Windows.Forms.Padding(10, 10, 10, 10);
+            this.txtRegCp.Padding = new System.Windows.Forms.Padding(10);
             this.txtRegCp.Size = new System.Drawing.Size(150, 42);
             this.txtRegCp.TabIndex = 9;
             // 
@@ -211,7 +211,7 @@
             this.txtRegTelefono.Location = new System.Drawing.Point(126, 381);
             this.txtRegTelefono.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtRegTelefono.Name = "txtRegTelefono";
-            this.txtRegTelefono.Padding = new System.Windows.Forms.Padding(10, 10, 10, 10);
+            this.txtRegTelefono.Padding = new System.Windows.Forms.Padding(10);
             this.txtRegTelefono.Size = new System.Drawing.Size(150, 42);
             this.txtRegTelefono.TabIndex = 11;
             // 
@@ -335,7 +335,7 @@
             this.txtSucUpd.Location = new System.Drawing.Point(109, 65);
             this.txtSucUpd.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtSucUpd.Name = "txtSucUpd";
-            this.txtSucUpd.Padding = new System.Windows.Forms.Padding(10, 10, 10, 10);
+            this.txtSucUpd.Padding = new System.Windows.Forms.Padding(10);
             this.txtSucUpd.Size = new System.Drawing.Size(150, 42);
             this.txtSucUpd.TabIndex = 0;
             // 
@@ -355,7 +355,7 @@
             this.txtAddressSucUpd.Location = new System.Drawing.Point(109, 119);
             this.txtAddressSucUpd.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtAddressSucUpd.Name = "txtAddressSucUpd";
-            this.txtAddressSucUpd.Padding = new System.Windows.Forms.Padding(10, 10, 10, 10);
+            this.txtAddressSucUpd.Padding = new System.Windows.Forms.Padding(10);
             this.txtAddressSucUpd.Size = new System.Drawing.Size(150, 42);
             this.txtAddressSucUpd.TabIndex = 3;
             // 
@@ -385,7 +385,7 @@
             this.txtTelSucUpd.Location = new System.Drawing.Point(109, 322);
             this.txtTelSucUpd.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtTelSucUpd.Name = "txtTelSucUpd";
-            this.txtTelSucUpd.Padding = new System.Windows.Forms.Padding(10, 10, 10, 10);
+            this.txtTelSucUpd.Padding = new System.Windows.Forms.Padding(10);
             this.txtTelSucUpd.Size = new System.Drawing.Size(150, 42);
             this.txtTelSucUpd.TabIndex = 11;
             // 
@@ -395,7 +395,7 @@
             this.txtCitSucUpd.Location = new System.Drawing.Point(109, 168);
             this.txtCitSucUpd.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtCitSucUpd.Name = "txtCitSucUpd";
-            this.txtCitSucUpd.Padding = new System.Windows.Forms.Padding(10, 10, 10, 10);
+            this.txtCitSucUpd.Padding = new System.Windows.Forms.Padding(10);
             this.txtCitSucUpd.Size = new System.Drawing.Size(150, 42);
             this.txtCitSucUpd.TabIndex = 5;
             // 
@@ -405,7 +405,7 @@
             this.txtCpSucUpd.Location = new System.Drawing.Point(107, 262);
             this.txtCpSucUpd.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtCpSucUpd.Name = "txtCpSucUpd";
-            this.txtCpSucUpd.Padding = new System.Windows.Forms.Padding(10, 10, 10, 10);
+            this.txtCpSucUpd.Padding = new System.Windows.Forms.Padding(10);
             this.txtCpSucUpd.Size = new System.Drawing.Size(150, 42);
             this.txtCpSucUpd.TabIndex = 9;
             // 
@@ -415,7 +415,7 @@
             this.txtStaSucUpd.Location = new System.Drawing.Point(109, 215);
             this.txtStaSucUpd.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtStaSucUpd.Name = "txtStaSucUpd";
-            this.txtStaSucUpd.Padding = new System.Windows.Forms.Padding(10, 10, 10, 10);
+            this.txtStaSucUpd.Padding = new System.Windows.Forms.Padding(10);
             this.txtStaSucUpd.Size = new System.Drawing.Size(150, 42);
             this.txtStaSucUpd.TabIndex = 7;
             // 
@@ -561,6 +561,7 @@
             this.btnTipos.TabIndex = 3;
             this.btnTipos.Text = "Tipos";
             this.btnTipos.UseVisualStyleBackColor = false;
+            this.btnTipos.Click += new System.EventHandler(this.btnTipos_Click);
             // 
             // btnTanques
             // 
@@ -575,6 +576,7 @@
             this.btnTanques.TabIndex = 2;
             this.btnTanques.Text = "Tanques";
             this.btnTanques.UseVisualStyleBackColor = false;
+            this.btnTanques.Click += new System.EventHandler(this.btnTanques_Click);
             // 
             // btnIslas
             // 

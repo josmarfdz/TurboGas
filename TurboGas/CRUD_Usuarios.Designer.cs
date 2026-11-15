@@ -79,6 +79,7 @@
             this.lblNombreUser.Size = new System.Drawing.Size(202, 30);
             this.lblNombreUser.TabIndex = 10;
             this.lblNombreUser.Text = ":nombre_del_usuario:";
+            this.lblNombreUser.Click += new System.EventHandler(this.lblNombreUser_Click);
             // 
             // btnVendedores
             // 
@@ -137,6 +138,7 @@
             this.btnTanques.TabIndex = 2;
             this.btnTanques.Text = "Tanques";
             this.btnTanques.UseVisualStyleBackColor = false;
+            this.btnTanques.Click += new System.EventHandler(this.btnTanques_Click);
             // 
             // btnBombas
             // 
