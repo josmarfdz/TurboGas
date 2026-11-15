@@ -39,6 +39,19 @@ namespace TurboGas
 
         private void btnBack_Click(object sender, EventArgs e)
         {
+            Control contenedor = this.Parent; // Funciona con cualquier tipo
+
+            if (contenedor != null)
+            {
+                contenedor.Controls.Clear();
+                Islas islas = new Islas();
+                islas.Dock = DockStyle.Fill;
+                contenedor.Controls.Add(islas);
+            }
+            else
+            {
+                MessageBox.Show("No se encontró contenedor padre.");
+            }
         }
 
         private void Perfilcs_Load(object sender, EventArgs e)
