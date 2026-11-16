@@ -11,6 +11,7 @@ using ClosedXML.Excel;
 using MySql.Data.MySqlClient;
 using System.IO;
 using System.Configuration;
+using System.Globalization;
 
 namespace TurboGas
 {
@@ -34,6 +35,8 @@ namespace TurboGas
         {
             InitializeComponent();
             ucCRUDTanques.Hide();
+            CargarPrecios();
+            IniciarActualizacionPrecios();
         }
 
         string Tipo, Método, Correo;
@@ -43,6 +46,49 @@ namespace TurboGas
         {
             get { return lblBomba.Text; }
             set { lblBomba.Text = value; }
+        }
+
+        private System.Windows.Forms.Timer timerPrecios;
+
+        private void IniciarActualizacionPrecios()
+        {
+            timerPrecios = new System.Windows.Forms.Timer();
+            timerPrecios.Interval = 1000; // 5 segundos
+            timerPrecios.Tick += (s, e) => CargarPrecios(false);
+            timerPrecios.Start();
+        }
+
+        private void CargarPrecios(bool mostrarError = true)
+        {
+            try
+            {
+                using (MySqlConnection con = new MySqlConnection(bdd))
+                {
+                    con.Open();
+                    using (MySqlCommand cmd = new MySqlCommand(
+                        "SELECT id_type, precio FROM tipos_combustible WHERE id_type IN (2, 3, 4)", con))
+                    using (MySqlDataReader rd = cmd.ExecuteReader())
+                    {
+                        while (rd.Read())
+                        {
+                            int id = rd.GetInt32("id_type");
+                            string texto = "$" + Convert.ToDecimal(rd["precio"])
+                                                 .ToString("0.00", CultureInfo.InvariantCulture);
+
+                            switch (id)
+                            {
+                                case 2: if (label6.Text != texto) label6.Text = texto; break;
+                                case 3: if (label7.Text != texto) label7.Text = texto; break;
+                                case 4: if (label2.Text != texto) label2.Text = texto; break;
+                            }
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                if (mostrarError) MessageBox.Show("Error al cargar precios: " + ex.Message);
+            }
         }
 
         private void btnTransacción_Click(object sender, EventArgs e)
@@ -55,15 +101,29 @@ namespace TurboGas
             if (string.IsNullOrEmpty(Tipo) || string.IsNullOrEmpty(Método) || Cantidad <= 0)
                 return;
 
-            Correo = tbCorreo.Text;
+            Correo = tbCorreo.Text.Trim();
 
-            GuardarVenta();
+            // Si la venta no se pudo guardar, no se envía recibo
+            if (!GuardarVenta())
+                return;
 
-            ReciboCompra rc = new ReciboCompra();
-            rc.EnviarCorreo(Correo, Método, Tipo, Cantidad);
+            // El correo es opcional: solo se envía si el usuario escribió uno
+            if (string.IsNullOrWhiteSpace(Correo))
+                return;
+
+            try
+            {
+                ReciboCompra rc = new ReciboCompra();
+                rc.EnviarCorreo(Correo, Método, Tipo, Cantidad);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("La venta se registró, pero no se pudo enviar el correo: " + ex.Message,
+                                "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
 
-        private void GuardarVenta()
+        private bool GuardarVenta()
         {
             try
             {
@@ -132,6 +192,7 @@ namespace TurboGas
 
                             MessageBox.Show($"Venta registrada\nCombustible: {Tipo}\nLitros: {Cantidad}L\nImporte: ${Importe}",
                                             "Venta exitosa", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            return true;
                         }
                         catch
                         {
@@ -145,6 +206,7 @@ namespace TurboGas
             {
                 MessageBox.Show("Error al guardar venta: " + ex.Message, "Error",
                                 MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
             }
         }
 
