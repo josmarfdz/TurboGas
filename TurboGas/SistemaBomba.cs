@@ -67,42 +67,77 @@ namespace TurboGas
         {
             try
             {
-                // Calcular precio por litro e importe según el tipo
-                switch (Tipo)
-                {
-                    case "Regular": Precio = 23.89; break;
-                    case "Premium": Precio = 27.54; break;
-                    case "Diesel": Precio = 31.59; break;
-                }
-
-                Importe = Math.Round(Cantidad * Precio, 2);
-
                 // Generar folio único
                 string folio = "F-" + DateTime.Now.ToString("yyyyMMddHHmmss");
-
-                string query = @"INSERT INTO venta (folio, combustible, litros, precio, importe, metodo_pago) 
-                                 VALUES (@Folio, @Combustible, @Litros, @Precio, @Importe, @MetodoPago)";
 
                 using (MySqlConnection con = new MySqlConnection(bdd))
                 {
                     con.Open();
-                    using (MySqlCommand cmd = new MySqlCommand(query, con))
+                    using (MySqlTransaction tx = con.BeginTransaction())
                     {
-                        cmd.Parameters.AddWithValue("@Folio", folio);
-                        cmd.Parameters.AddWithValue("@Combustible", Tipo);
-                        cmd.Parameters.AddWithValue("@Litros", Cantidad);
-                        cmd.Parameters.AddWithValue("@Precio", Precio);
-                        cmd.Parameters.AddWithValue("@Importe", Importe);
-                        cmd.Parameters.AddWithValue("@MetodoPago", Método);
+                        try
+                        {
+                            // 1) Identificar qué combustible se eligió y su precio
+                            int idTipo;
+                            double precio;
 
-                        int filasAfectadas = cmd.ExecuteNonQuery();
+                            using (MySqlCommand cmdTipo = new MySqlCommand(
+                                "SELECT id_type, precio FROM tipos_combustible WHERE nombre = @Combustible AND activo = 1",
+                                con, tx))
+                            {
+                                cmdTipo.Parameters.AddWithValue("@Combustible", Tipo);
+                                using (MySqlDataReader rd = cmdTipo.ExecuteReader())
+                                {
+                                    if (!rd.Read())
+                                        throw new Exception("El combustible '" + Tipo + "' no existe o está inactivo.");
+                                    idTipo = rd.GetInt32("id_type");
+                                    precio = Convert.ToDouble(rd["precio"]);
+                                }
+                            }
 
-                        if (filasAfectadas > 0)
-                            MessageBox.Show($"Venta registrada\nLitros: {Cantidad}L\nImporte: ${Importe}",
+                            Precio = precio;
+                            Importe = Math.Round(Cantidad * Precio, 2);
+
+                            // 2) Descontar del tanque de ESE tipo (activo y con litros suficientes)
+                            using (MySqlCommand cmdTanque = new MySqlCommand(
+                                @"UPDATE tanques
+                          SET litros_actuales = litros_actuales - @Litros
+                          WHERE tipo_combustible_id = @IdTipo
+                            AND activo = 1
+                            AND litros_actuales >= @Litros
+                          LIMIT 1", con, tx))
+                            {
+                                cmdTanque.Parameters.AddWithValue("@Litros", Cantidad);
+                                cmdTanque.Parameters.AddWithValue("@IdTipo", idTipo);
+
+                                if (cmdTanque.ExecuteNonQuery() == 0)
+                                    throw new Exception("No hay un tanque activo de " + Tipo + " con litros suficientes.");
+                            }
+
+                            // 3) Registrar la venta
+                            using (MySqlCommand cmdVenta = new MySqlCommand(
+                                @"INSERT INTO venta (folio, combustible, litros, precio, importe, metodo_pago)
+                          VALUES (@Folio, @Combustible, @Litros, @Precio, @Importe, @MetodoPago)", con, tx))
+                            {
+                                cmdVenta.Parameters.AddWithValue("@Folio", folio);
+                                cmdVenta.Parameters.AddWithValue("@Combustible", Tipo);
+                                cmdVenta.Parameters.AddWithValue("@Litros", Cantidad);
+                                cmdVenta.Parameters.AddWithValue("@Precio", Precio);
+                                cmdVenta.Parameters.AddWithValue("@Importe", Importe);
+                                cmdVenta.Parameters.AddWithValue("@MetodoPago", Método);
+                                cmdVenta.ExecuteNonQuery();
+                            }
+
+                            tx.Commit();
+
+                            MessageBox.Show($"Venta registrada\nCombustible: {Tipo}\nLitros: {Cantidad}L\nImporte: ${Importe}",
                                             "Venta exitosa", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        else
-                            MessageBox.Show("No se pudo registrar la venta", "Error",
-                                            MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
+                        catch
+                        {
+                            tx.Rollback();
+                            throw;
+                        }
                     }
                 }
             }
