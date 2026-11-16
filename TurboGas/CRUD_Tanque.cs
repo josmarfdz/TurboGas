@@ -41,7 +41,7 @@ namespace TurboGas
 
         private void CRUD_Tanque_Load(object sender, EventArgs e)
         {
-            lblNombreUser.Text = Sesion.UserNombre;
+            label8.Text = Sesion.UserNombre;
 
             // Si se abre desde SistemaBomba (botón de configuración): solo botón de regreso
             bool incrustado = this.Parent is SistemaBomba;
@@ -418,18 +418,34 @@ namespace TurboGas
             }
         }
 
-        private void btnSucursales_Click(object sender, EventArgs e) { Ir(new CRUD_Sucursales()); }
-        private void btnIslas_Click(object sender, EventArgs e) { Ir(new CRUD_Islas()); }
-        private void btnUsers_Click(object sender, EventArgs e) { Ir(new CRUD_Usuarios()); }
-
-        private void btnTanques_Click(object sender, EventArgs e)
+        private void label4_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void label4_Click(object sender, EventArgs e)
+        private void btnSucursales_Click_1(object sender, EventArgs e)
         {
+            Ir(new CRUD_Sucursales());
+        }
 
+        private void btnIslas_Click_1(object sender, EventArgs e)
+        {
+            Ir(new CRUD_Islas());
+        }
+
+        private void btnTipos_Click(object sender, EventArgs e)
+        {
+            Ir(new CRUD_todo());
+        }
+
+        private void btnTanques_Click_1(object sender, EventArgs e)
+        {
+            Ir(new CRUD_Bombas());
+        }
+
+        private void btnUsers_Click_1(object sender, EventArgs e)
+        {
+            Ir(new CRUD_Usuarios());
         }
     }
 }

@@ -59,7 +59,7 @@ namespace TurboGas
 
         private void btnCreate_Click(object sender, EventArgs e)
         {
-            string name = txtActName.Text;
+            string name = txtName.Text;
             string clave = txtClave.Text;
             string desc = txtDesc.Text;
 
