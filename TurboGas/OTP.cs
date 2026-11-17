@@ -12,7 +12,7 @@ namespace TurboGas
     internal class OTP
     {
         string code;
-        string contraseña = Environment.GetEnvironmentVariable("SMTP_PASS");
+        string contraseña = Environment.GetEnvironmentVariable("auth");
         private void GenerarCódigo()
         {
             const string cadena = "AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz0123456789";

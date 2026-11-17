@@ -22,7 +22,7 @@ namespace TurboGas
 
         public static class Conexion
         {
-            public static string Cadena => ConfigurationManager.ConnectionStrings["TurboGasDB"].ConnectionString;
+            public static string Cadena => ConfigurationManager.ConnectionStrings["TurboGasDB"].ConnectionString ?? string.Empty;
 
             public static MySqlConnection Obtener()
             {
@@ -30,7 +30,7 @@ namespace TurboGas
             }
         }
 
-        static string bdd = Conexion.Cadena;
+        static string bdd => Conexion.Cadena;
 
         private void btConfiguración_Click(object sender, EventArgs e)
         {

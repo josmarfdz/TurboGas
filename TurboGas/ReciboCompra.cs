@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Linq;
 using System.Net;
 using System.Net.Mail;
@@ -7,6 +8,7 @@ using System.Runtime.ConstrainedExecution;
 using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
+using MySql.Data.MySqlClient;
 
 namespace TurboGas
 {
@@ -19,21 +21,26 @@ namespace TurboGas
 
         public void Cálculos(string tipo, double cantidad)
         {
-            switch (tipo)
+            string cadena = ConfigurationManager.ConnectionStrings["TurboGasDB"].ConnectionString ?? string.Empty;
+
+            using (MySqlConnection con = new MySqlConnection(cadena))
+            using (MySqlCommand cmd = new MySqlCommand(
+                "SELECT precio FROM tipos_combustible WHERE nombre = @Combustible AND activo = 1", con))
             {
-                case "Regular":
-                    tipoDouble = 23.89;
-                    break;
-                case "Premium":
-                    tipoDouble = 27.54;
-                    break;
-                case "Diesel":
-                    tipoDouble = 31.59;
-                    break;
+                cmd.Parameters.AddWithValue("@Combustible", tipo);
+                con.Open();
+
+                object resultado = cmd.ExecuteScalar();
+                if (resultado == null || resultado == DBNull.Value)
+                    throw new Exception("El combustible '" + tipo + "' no existe o está inactivo.");
+
+                tipoDouble = Convert.ToDouble(resultado);
             }
-            total = Math.Round(cantidad * tipoDouble,2);
-            iva = Math.Round(total * 0.16,2);
-            subtotal = total - iva;
+
+            // El precio de la bomba ya incluye IVA (16%), así que se desglosa hacia atrás
+            total = Math.Round(cantidad * tipoDouble, 2);
+            subtotal = Math.Round(total / 1.16, 2);
+            iva = Math.Round(total - subtotal, 2);   // subtotal + iva = total exacto
         }
 
         public void GenerarCódigo()

@@ -18,6 +18,7 @@ namespace TurboGas
             ucCambiarContraseña.Hide();
         }
 
+
         private void btnContraseña_Click(object sender, EventArgs e)
         {
             ucCambiarContraseña.Show();
