@@ -10,6 +10,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
+using BCrypt.Net;
 
 namespace TurboGas
 {
@@ -50,38 +51,45 @@ namespace TurboGas
         {
             string mail = tbCorreo.Text;
             string contra = tbContraseña.Text;
-            string hash = Encriptacion.EncriptacionSHA256(contra);
 
-            Consulta(mail, hash);
+            Consulta(mail, contra);
         }
 
-        private void Consulta(string usuario, string pass)
+        private void Consulta(string correo, string pass)
         {
-            string consulta = "SELECT nombre FROM Visualizacion_Usuarios where correo = @Nombre AND CONTRASEÑA = @Contraseña";
+            string consulta = "SELECT nombre, CONTRASEÑA FROM usuarios_sistem WHERE correo = @Correo";
             try
             {
                 using (MySqlConnection con = new MySqlConnection(bdd))
                 {
                     con.Open();
-                    MySqlCommand cmd = new MySqlCommand(consulta, con);
-                    cmd.Parameters.AddWithValue("@Nombre", usuario);
-                    cmd.Parameters.AddWithValue("@Contraseña", pass);
-
-
-                    using (MySqlDataReader lectura = cmd.ExecuteReader())
+                    using (MySqlCommand cmd = new MySqlCommand(consulta, con))
                     {
-                        if (lectura.HasRows == true)
-                        {
-                            lectura.Read();
-                            Sesion.UserNombre = lectura["nombre"].ToString();
-                            MessageBox.Show($"Bienvenido/a {Sesion.UserNombre}");
+                        cmd.Parameters.AddWithValue("@Correo", correo);
 
-                            ucSucursales.Show();
-                        }
-
-                        else
+                        using (MySqlDataReader lectura = cmd.ExecuteReader())
                         {
-                            MessageBox.Show($"Usuario o contraseña incorrecta");
+                            if (lectura.Read())
+                            {
+                                string hashAlmacenado = lectura["CONTRASEÑA"].ToString();
+
+                                // ✅ Verificamos con bcrypt (compara el hash guardado contra la pass)
+                                if (Encriptacion.Verificar(pass, hashAlmacenado))
+                                {
+                                    Sesion.UserNombre = lectura["nombre"].ToString();
+                                    MessageBox.Show($"Bienvenido/a {Sesion.UserNombre}");
+                                    ucSucursales.Show();
+                                }
+                                else
+                                {
+                                    MessageBox.Show("Usuario o contraseña incorrecta");
+                                }
+                            }
+                            else
+                            {
+                                // Mismo mensaje que arriba: no reveles si el correo existe o no
+                                MessageBox.Show("Usuario o contraseña incorrecta");
+                            }
                         }
                     }
                 }
@@ -94,19 +102,39 @@ namespace TurboGas
 
         public static class Encriptacion
         {
-            public static string EncriptacionSHA256(string con)
-            {
-                using (SHA256 sha256 = SHA256.Create())
-                {
-                    byte[] bytes = Encoding.UTF8.GetBytes(con);
-                    byte[] hash = sha256.ComputeHash(bytes);
+            // Factor de coste. 11-12 es un buen balance hoy en día.
+            // Cada +1 duplica el tiempo de hasheo.
+            private const int WorkFactor = 12;
 
-                    StringBuilder resultado = new StringBuilder();
-                    foreach (byte b in hash)
-                    {
-                        resultado.Append(b.ToString("X2"));
-                    }
-                    return resultado.ToString();
+            /// <summary>
+            /// Hashea una contraseña usando bcrypt (con salt aleatorio incorporado).
+            /// El resultado es distinto cada vez que llamas a este método,
+            /// incluso con la misma contraseña.
+            /// </summary>
+            public static string Encriptar(string password)
+            {
+                return BCrypt.Net.BCrypt.HashPassword(password, WorkFactor);
+            }
+
+            /// <summary>
+            /// Verifica si una contraseña en texto plano corresponde al hash almacenado.
+            /// ESTE es el método que debes usar para el login,
+            /// NO compares strings con == porque los hashes son aleatorios.
+            /// </summary>
+            public static bool Verificar(string password, string hashAlmacenado)
+            {
+                if (string.IsNullOrEmpty(password) || string.IsNullOrEmpty(hashAlmacenado))
+                    return false;
+
+                try
+                {
+                    return BCrypt.Net.BCrypt.Verify(password, hashAlmacenado);
+                }
+                catch (BCrypt.Net.SaltParseException)
+                {
+                    // El hash almacenado no tiene formato bcrypt válido
+                    // (por ejemplo, si todavía tienes hashes viejos SHA-256 en la BD).
+                    return false;
                 }
             }
         }

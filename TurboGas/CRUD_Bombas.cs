@@ -60,13 +60,15 @@ namespace TurboGas
                     cmd.Parameters.AddWithValue("@Numero", numero);
 
                     cmd.ExecuteNonQuery();
+                    MessageBox.Show("Bomba creada", "Bomba creada con exito", MessageBoxButtons.OK);
                 }
+
             }
             catch(Exception ex)
             {
                 MessageBox.Show("Error" + ex.Message);
             }
-            MessageBox.Show("Bomba creada", "Bomba creada con exito", MessageBoxButtons.OK);
+           
         }
 
         private void LlenarComboBoxCreateBomba()

@@ -120,5 +120,42 @@ namespace TurboGas
 
             return rol;
         }
+
+        private void Sucursales_Load(object sender, EventArgs e)
+        {
+            Consulta_Sucursal();
+        }
+
+        private void Consulta_Sucursal()
+        {
+            string query = "SELECT nombre, direccion FROM sucursales";
+
+            try
+            {
+                using (MySqlConnection cnc = new MySqlConnection(bdd))
+                {
+                    cnc.Open();
+                    using (MySqlCommand cmd = new MySqlCommand(query, cnc))
+                    {
+                        using (MySqlDataReader reader = cmd.ExecuteReader())
+                        {
+                            if (reader.Read())
+                            {
+                                lblNombreSucursal.Text = reader["nombre"].ToString();
+                                lblDirecciónSucursal.Text = reader["direccion"].ToString();
+                            }
+                            else
+                            {
+                                MessageBox.Show("No hay sucursales registradas.");
+                            }
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+            }
+        }
     }
 }
